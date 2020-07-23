@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if lte IE 9]>  <html class="ie oldie" lang="en"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- gets defaults from _config.yml, but can be overridden in front matter for any page -->
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description | markdownify | strip_html | strip_newlines }}">
+
+    <!-- basic social sharing card setup, with a few things still to fill in later -->
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="{{ page.description | markdownify | strip_html | strip_newlines }}"/>
+    <meta property="og:image" content="" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" value="" />
+    <meta name="twitter:title" value="" />
+    <meta name="twitter:description" value="{{ page.description | markdownify | strip_html | strip_newlines }}" />
+    <meta name="twitter:image" value="" />
+    <meta name="twitter:image:alt" value="" />
+
+    <!-- ico and touch-icon images need to be created -->
+    <link rel="shortcut icon" href="/media/img/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" type="image/png" href="/media/img/touch-icon-144x144.png" sizes="144x144" />
+
+    <link rel="stylesheet" href="/media/css/style.css">
+
+    <!-- GOOGLE ANALYTICS ETC GOES HERE-->
+</head>
+
+<body class="{{ page.class }}">
+    <header>
+    </header>
+    
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+    </footer>
+</body>
+</html>
