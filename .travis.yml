@@ -11,5 +11,5 @@ after_success:
 - test $TRAVIS_BRANCH = "staging" && s3_website push --config-dir=_config/staging/
 branches:
   only:
-  - master
+  - production
   - staging
