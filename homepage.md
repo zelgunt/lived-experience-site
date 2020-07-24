@@ -2,4 +2,4 @@
 permalink: /
 ---
 
-Hello world.
+Hello world, testing this rig.
