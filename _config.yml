@@ -17,7 +17,6 @@ github_username:  jsguntzel
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-asciidoc
   - jekyll-gist
   - jekyll-paginate
   - jekyll-redirect-from
