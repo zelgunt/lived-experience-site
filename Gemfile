@@ -17,7 +17,6 @@ gem "minima", "~> 2.5"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem 'jekyll-gist'
-  gem "jekyll-asciidoc"
   gem 'jekyll-redirect-from'
   gem 'jekyll-paginate'
   gem 'jekyll-tagging', "~> 1.1.0"
