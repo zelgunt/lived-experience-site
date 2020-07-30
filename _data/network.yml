@@ -1,5 +1,3 @@
-- menu_name: "Other Resources"
-
 - name: "Link title 1"
   url: "http://example.com"
   class: "link-class"

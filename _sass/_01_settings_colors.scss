@@ -103,7 +103,7 @@ $topbar-dropdown-toggle-alpha: 0.6;
 /* Footer
 ------------------------------------------------------------------- */
 
-$footer-bg: $ci-2;
+$footer-bg: darken($ci-2, 10%);
 $footer-color: #fff;
 $footer-link-color: $ci-6;
 

@@ -18,6 +18,12 @@
 
 /* Table of Contents (Index)
 ------------------------------------------------------------------- */
+#toc {
+  border: solid 1px;
+  list-style-position: inside;
+  padding: 1em;
+  margin: 0 1em 0 0;
+}
 
 #toc ul,
 #toc ul ul,
@@ -71,8 +77,8 @@
     border-bottom: 1px solid #fff;
   }
   .alert-box.terminal {
-    background: $grey-12; 
-    color: #fff; 
+    background: $grey-12;
+    color: #fff;
     border-color: scale-color($grey-12, $lightness: -14%);
     font-family: $font-family-monospace;
   }
@@ -158,5 +164,20 @@ img.lazy {
     display: block;
     padding-top: 50px;
     margin-top: -50px;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .frontpage-widget {
+    .widget-image {
+      width: 100%;
+      height: 150px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 }

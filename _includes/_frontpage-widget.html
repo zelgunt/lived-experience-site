@@ -13,17 +13,19 @@
 
 
 <div class="medium-4 columns frontpage-widget">
+	<div>
 	{% if include.widget.video %}
 		{{ include.widget.video }}
 	{% elsif widget_url == empty %}
-		{% if widget_image != empty %}<img src="{{ widget_image }}" alt="" />{% endif %}
+		{% if widget_image != empty %}<div class="widget-image"><img src="{{ widget_image }}" alt="{{ include.widget.title }} header image" /></div>{% endif %}
+		<h2 class="font-size-h5 t10">{{ include.widget.title }}</h2>
 	{% else %}
 		<a href="{{ widget_url }}">
-			{% if widget_image != empty %}<img src="{{ widget_image }}" alt="" />{% endif %}
+			{% if widget_image != empty %}<div class="widget-image"><img src="{{ widget_image }}" alt="{{ include.widget.title }} header image" /></div>{% endif %}
 		</a>
+		<a href="{{ widget_url }}" title="Learn more"><h2 class="font-size-h5 t10">{{ include.widget.title }}</h2></a>
 	{% endif %}
-	<h2 class="font-size-h3 t10">{{ include.widget.title }}</h2>
 
-	{% if include.widget.text != empty %}<p>{{ include.widget.text }}</p>{% endif %}
-	{% if widget_url != empty %}<p><a class="button tiny radius" href="{{ widget_url }}">{{ site.data.language.more }}</a></p>{% endif %}
+	{% if include.widget.text != empty %}<p>{{ include.widget.text }}{% if widget_url != empty %}&nbsp;<a href="{{widget_url}}" title="Learn more...">&rarr;</a>{% endif %}</p>{% endif %}
+	</div>
 </div>

@@ -31,6 +31,7 @@ callforaction:
   style: alert
 permalink: /index.html
 
+breadcrumb: false
 # This is a nasty hack to make the navigation highlight
 # this page as active in the topbar navigation
 homepage: true

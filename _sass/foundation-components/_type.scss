@@ -234,7 +234,7 @@ $align-class-breakpoints:
     p {
       font-family: $paragraph-font-family;
       font-weight: $paragraph-font-weight;
-      font-size: $paragraph-font-size;
+      // font-size: $paragraph-font-size;
       line-height: $paragraph-line-height;
       margin-bottom: $paragraph-margin-bottom;
       text-rendering: $paragraph-text-rendering;
@@ -316,7 +316,7 @@ $align-class-breakpoints:
     ul,
     ol,
     dl {
-      font-size: $list-font-size;
+      // font-size: $list-font-size;
       line-height: $list-line-height;
       margin-bottom: $list-margin-bottom;
       list-style-position: $list-style-position;
@@ -451,15 +451,15 @@ $align-class-breakpoints:
     }
 
 
-    @media #{$medium-up} {
-      h1,h2,h3,h4,h5,h6 { line-height: $header-line-height; }
-      h1 { font-size: $h1-font-size; }
-      h2 { font-size: $h2-font-size; }
-      h3 { font-size: $h3-font-size; }
-      h4 { font-size: $h4-font-size; }
-      h5 { font-size: $h5-font-size; }
-      h6 { font-size: $h6-font-size; }
-    }
+    // @media #{$medium-up} {
+    //   h1,h2,h3,h4,h5,h6 { line-height: $header-line-height; }
+    //   h1 { font-size: $h1-font-size; }
+    //   h2 { font-size: $h2-font-size; }
+    //   h3 { font-size: $h3-font-size; }
+    //   h4 { font-size: $h4-font-size; }
+    //   h5 { font-size: $h5-font-size; }
+    //   h6 { font-size: $h6-font-size; }
+    // }
 
     // Only include these styles if you want them.
     @if $include-print-styles {

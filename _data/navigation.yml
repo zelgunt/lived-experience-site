@@ -36,6 +36,8 @@
   dropdown:
   - title: "Blog Archive"
     url: "/blog/archive/"
+  - title: "Topics"
+    url: "/topic/"
 
 - title: "Search"
   url: "/search/"

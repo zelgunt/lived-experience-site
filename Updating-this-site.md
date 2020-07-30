@@ -1,7 +1,8 @@
 - Edit main menu in `_data/navigation.yml`
+- Homepage 3-column widgets are edited in `pages/pages-root-folder/index.md` as frontmatter (widget1, 2, etc.)
 - Page layouts available:
-    - `layout: page`
-    - `layout: page-fullwidth`
+    - `layout: page` 8-column centered
+    - `layout: page-fullwidth` 12-column
 - The info in the footer:
     - About blurb is in `_config.yml`
     - Services are in `_data/services.yml`

@@ -26,23 +26,23 @@ Check typography variables › _3_typography_settings.scss
 
 a,
 a:link {
-    transition: all .4s;
+  transition: all .4s;
 }
 
 a:visited {
-    border-bottom: $grey-2;
+  border-bottom: $grey-2;
 }
 
 a:hover {
-    color: darken( $ci-1, 10% );
+  color: darken( $ci-1, 10% );
 }
 
 a:focus {
-    color: lighten( $ci-1, 20% );
+  color: lighten( $ci-1, 20% );
 }
 
 a:active {
-    color: darken( $ci-1, 20% );
+  color: darken( $ci-1, 20% );
 }
 
 
@@ -51,33 +51,33 @@ a:active {
 ------------------------------------------------------------------- */
 
 p {
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    -ms-word-break: normal;
-    /* Non standard for webkit */
-    word-break: normal;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -ms-word-break: normal;
+  /* Non standard for webkit */
+  word-break: normal;
 }
 p a,
 article a {
-    font-weight: bold;
-    border-bottom: 1px dotted;
+  font-weight: bold;
+  border-bottom: 1px dotted;
 }
 p a:hover,
 article a:hover {
-    border-bottom: 2px solid;
+  border-bottom: 2px solid;
 }
 p a.button,
 .button,
 .button:hover {
-    border: 0;
-    color: #fff;
+  border: 0;
+  color: #fff;
 }
 p.button a {
-    border: 0;
-    color: #fff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  border: 0;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -86,75 +86,156 @@ p.button a {
 ------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $header-font-family;
-    font-weight: normal;
-    padding: 0;
+  font-family: $header-font-family;
+  font-weight: normal;
+  padding: 0;
+}
+
+$base-font-size: 18px;
+
+@mixin rhythm_margin($font-size) {
+  margin-top: ($base-font-size / $font-size) * 1em;
+}
+
+// https://codepen.io/MadeByMike/pen/vNrvdZ
+// https://www.madebymike.com.au/writing/precise-control-responsive-typography/
+@mixin fluid($properties, $min-screen, $max-screen, $min-value, $max-value) {
+  & {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  @media screen and (min-width: $min-screen) {
+    @each $property in $properties {
+    #{$property}: calc-interpolation($min-screen, $min-value, $max-screen, $max-value);
+    }
+  }
+
+  @media screen and (min-width: $max-screen) {
+    @each $property in $properties {
+    #{$property}: $max-value;
+    }
+  }
+  }
+}
+
+// /* Single property */
+// html {
+//   @include fluid(font-size, 320px, 1366px, 14px, 20px);
+// }
+
+// /* Multiple properties with same values */
+// h1,h2,h3,h4,h5 {
+//   @include fluid((padding-top, padding-bottom), 20rem, 70rem, 0rem, .5rem);
+// }
+
+// Requires the calc-interpolation function which can also be used independently
+
+@function calc-interpolation($min-screen, $min-value, $max-screen, $max-value) {
+  $a: ($max-value - $min-value) / ($max-screen - $min-screen);
+  $b: $min-value - $a * $min-screen;
+
+  $sign: "+";
+  @if ($b < 0) {
+  $sign: "-";
+  $b: abs($b);
+  }
+  @return calc(#{$a*100}vw #{$sign} #{$b});
+}
+
+
+body {
+  @include fluid(font-size, 500px, 1500px, $base-font-size, 24px);
+  line-height: 1.6;
+}
+
+p,
+ol,
+ul,
+blockquote,
+figure,
+dl {
+  @include rhythm_margin($base-font-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  display: block;
 }
 
 h1 {
-    font-size: $font-size-h1;
-    margin-top: 0;
+  @include fluid(font-size, 500px, 1500px, 48px, 60px);
+  @include rhythm_margin(48px);
 }
+
 h2 {
-    font-size: $font-size-h2;
-    margin: 1.563em 0 0 0;
+  @include fluid(font-size, 500px, 1500px, 39px, 48px);
+  @include rhythm_margin(39px);
 }
-    .blog-index h2 {
-        margin-top: 0;
-    }
+
 h3 {
-    font-size: $font-size-h3;
-    margin: 1.152em 0 0 0;
+  @include fluid(font-size, 500px, 1500px, 31px, 36px);
+  @include rhythm_margin(31px);
 }
+
 h4 {
-    font-size: $font-size-h4;
-    margin: 1.152em 0 0 0;
+  @include fluid(font-size, 500px, 1500px, 25px, 30px);
+  @include rhythm_margin(25px);
 }
+
 h5 {
-    font-size: $font-size-h5;
-    margin: 1em 0 0 0;
+  @include fluid(font-size, 500px, 1500px, 20px, 24px);
+  @include rhythm_margin(20px);
 }
 
-
+h6 {
+  @include fluid(font-size, 500px, 1500px, $base-font-size, 24px);
+  @include rhythm_margin(16px);
+}
 
 /* Images
 ------------------------------------------------------------------- */
 
 img { border-radius: $global-radius;}
-    img.alignleft,
-    img.left        { float: left; margin:5px 15px 5px 0; }
-    img.alignright,
-    img.right       { float: right; margin:5px 0 5px 15px; }
-    img.aligncenter,
-    img.center      { display: block; margin:0 auto 10px; }
+  img.alignleft,
+  img.left        { float: left; margin:5px 15px 5px 0; }
+  img.alignright,
+  img.right       { float: right; margin:5px 0 5px 15px; }
+  img.aligncenter,
+  img.center      { display: block; margin:0 auto 10px; }
 
 figure {
-    margin: 0 0 rem-calc(30) 0;
+  margin: 0 0 rem-calc(30) 0;
 }
 #masthead-with-background-color figure,
 #masthead-with-pattern figure {
-    margin: 0;
+  margin: 0;
 }
 figcaption,
 .masthead-caption {
-    color: $grey-10;
-    font-family: $font-family-sans-serif;
-    font-size: rem-calc(13);
-    padding-top: rem-calc(2);
+  color: $grey-10;
+  font-family: $font-family-sans-serif;
+  font-size: rem-calc(13);
+  padding-top: rem-calc(2);
 }
 figcaption a,
 .masthead-caption a {
-    border-bottom: 1px dotted $grey-4;
-    color: $grey-10;
+  border-bottom: 1px dotted $grey-4;
+  color: $grey-10;
 }
 figcaption a:hover,
 .masthead-caption a:hover {
-    border-bottom: 2px solid $primary-color;
-    color: $primary-color;
+  border-bottom: 2px solid $primary-color;
+  color: $primary-color;
 }
 .masthead-caption {
-    padding-right: 10px;
-    text-align: right;
+  padding-right: 10px;
+  text-align: right;
 }
 
 
@@ -163,7 +244,7 @@ figcaption a:hover,
 ------------------------------------------------------------------- */
 
 td {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 
@@ -172,20 +253,20 @@ td {
 ------------------------------------------------------------------- */
 
 pre {
-    overflow: auto;
-    margin-bottom: rem-calc(20);
-    padding: 5px;
-    background-color: $code-background-color;
-    border-radius: $global-radius;
+  overflow: auto;
+  margin-bottom: rem-calc(20);
+  padding: 5px;
+  background-color: $code-background-color;
+  border-radius: $global-radius;
 }
 pre code {
-    padding: rem-calc(2) rem-calc(5) rem-calc(1) rem-calc(0);
-    border: 0;
+  padding: rem-calc(2) rem-calc(5) rem-calc(1) rem-calc(0);
+  border: 0;
 }
 
 code {
-    font-size: rem-calc(14);
-    line-height: 1.5;
+  font-size: rem-calc(14);
+  line-height: 1.5;
 }
 
 
@@ -194,34 +275,34 @@ code {
 ------------------------------------------------------------------- */
 
 ul, ol {
-    margin-left: 20px;
-    padding: 0;
+  margin-left: 20px;
+  padding: 0;
 }
 li {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .no-bullet {
-    list-style: none;
-    margin-left: 0;
+  list-style: none;
+  margin-left: 0;
 }
 
 li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
+  > ul,
+  > ol {
+     margin-bottom: 0;
+  }
 }
 
 dl {
 
 }
 dt:first-child {
-    padding-top: 0px;
+  padding-top: 0px;
 }
 dt {
-    font-weight: bold;
-    padding-top: 30px;
+  font-weight: bold;
+  padding-top: 30px;
 }
 dd {
 }
@@ -244,55 +325,55 @@ blockquote {
   text-indent: 3.5ch;
 
   &::before {
-    color: desaturate(lighten($ci-3, 25%), 25%);
-    content: '“';
-    font-size: 120px;
-    left: -40px;
-    position: absolute;
-    top: -60px;
+  color: desaturate(lighten($ci-3, 25%), 25%);
+  content: '“';
+  font-size: 120px;
+  left: -40px;
+  position: absolute;
+  top: -60px;
   }
 
   p {
-    color: $body-bg;
-    margin: .15rem;
+  color: $body-bg;
+  margin: .15rem;
   }
 
   a {
-    color: lighten($ci-4, 35%);
+  color: lighten($ci-4, 35%);
   }
 
   cite {
-    padding-top: 5px;
+  padding-top: 5px;
 
-    &::before {
-      content:"\2014 \0020"
-    }
+  &::before {
+    content:"\2014 \0020"
+  }
 
-    a,
-    a:visited {
-      color: $grey-10;
-    }
+  a,
+  a:visited {
+    color: $grey-10;
+  }
   }
 }
 
 
 div.content {
   .terminator {
-    background: $ci-4;
-    display: inline-block;
-    height: 15px;
-    margin-left: .25em;
-    position: relative;
-    width: 15px;
+  background: $ci-4;
+  display: inline-block;
+  height: 15px;
+  margin-left: .25em;
+  position: relative;
+  width: 15px;
   }
 }
 
 button, .button {
-    letter-spacing: 1px;
+  letter-spacing: 1px;
 }
 
 mark {
-    background-color: scale-color($warning-color, $lightness: 60%);
+  background-color: scale-color($warning-color, $lightness: 60%);
 }
 
 
@@ -301,30 +382,30 @@ mark {
 ------------------------------------------------------------------- */
 
 .subheadline {
-    font-size: rem-calc(16);
-    margin: 0;
-    text-transform: uppercase;
+  font-size: rem-calc(16);
+  margin: 0;
+  text-transform: uppercase;
 }
 .teaser {
-    font-size: rem-calc(20);
+  font-size: rem-calc(20);
 }
 .big-teaser {
-    font-style: italic; font-weight: 300;
+  font-style: italic; font-weight: 300;
 }
 .big-teaser a {
-    font-style: italic; font-weight: 400;
+  font-style: italic; font-weight: 400;
 }
 
 /* Smaller Fontsize for Bigteaser on small devices */
 @media only screen {
-    .big-teaser {
-        font-size: rem-calc(20);
-    }
+  .big-teaser {
+    font-size: rem-calc(20);
+  }
 }
 @media only screen and (min-width: 40.063em) {
-    .big-teaser         {
-        font-size: rem-calc(29);
-    }
+  .big-teaser         {
+    font-size: rem-calc(29);
+  }
 }
 
 
@@ -348,22 +429,22 @@ mark {
 ------------------------------------------------------------------- */
 
 .footnotes:before {
-    content: "";
-    position: absolute;
-    height: 1px;
-    width: 60px;
-    margin-top: -10px;
-    border-bottom: 1px solid $grey-2;
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 60px;
+  margin-top: -10px;
+  border-bottom: 1px solid $grey-2;
 }
 .footnotes {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 .footnotes ol {
-    font-size: $font-size-small;
+  font-size: $font-size-small;
 }
 .footnotes p {
-    font-size: inherit;
-    margin-bottom: 0;
+  font-size: inherit;
+  margin-bottom: 0;
 }
 
 
@@ -377,9 +458,9 @@ mark {
   font-family: 'iconfont';
   src: url('../fonts/iconfont.eot'); /* IE9 Compat Modes */
   src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/iconfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/iconfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/iconfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+     url('../fonts/iconfont.woff') format('woff'), /* Pretty Modern Browsers */
+     url('../fonts/iconfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('../fonts/iconfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 .iconfont       { font-family: iconfont; }

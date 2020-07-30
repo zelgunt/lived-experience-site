@@ -186,7 +186,7 @@ table.tableblock,
     //FIXME @extend %subheader;
     text-rendering: $subheader-text-rendering;
     font-size: $subheader-font-size;
-    font-weight: bold; 
+    font-weight: bold;
     color: $subheader-font-color;
     text-align: left;
   }
@@ -198,13 +198,13 @@ table.tableblock,
   border: 0;
   background: none;
   width: 100%;
-	
+
 	tr, td {
 		line-height: 1.6;
 		font-size: 1rem;
 		color: $text-color;
 	}
-	
+
   td.icon {
     text-align: center;
     vertical-align: middle;
@@ -224,7 +224,7 @@ table.tableblock,
   td.content {
     padding-left: emCalc(18px);
     padding-right: emCalc(20px);
-    border-left: $hr-border-width $hr-border-style $hr-border-color; 
+    border-left: $hr-border-width $hr-border-style $hr-border-color;
     // FIXME use $aside-font-color
     color: $panel-font-color;
     // QUESTION use opacity instead of blockquote-cite-font-color?
@@ -274,7 +274,7 @@ table.tableblock,
     }
   }
 }
- 
+
 
 .exampleblock > .content,
 .sidebarblock > .content {
@@ -306,7 +306,7 @@ table.tableblock,
     //background: #ededef;
     background: #f2f1f1;
   }
-	
+
 
   // override default setting for 'code'
   & > code {
@@ -325,13 +325,13 @@ table.tableblock,
     word-wrap: break-word;
 
 		background-color: $pre-bg;
-		
+
     &.nowrap {
       overflow-x: auto;
       white-space: pre;
       word-wrap: normal;
     }
-    
+
     // screens below breakpoint
     padding: $pre-padding;
 
@@ -352,10 +352,10 @@ table.tableblock,
 		background-color: inherit;
 		border: none;
 		padding: 0px;
-		
+
 		font-size: 1em;
 		word-wrap: break-word;
-		
+
     &.nowrap {
       overflow-x: auto;
       white-space: pre;
@@ -409,13 +409,13 @@ table.tableblock,
 }
 
 .listingblock.terminal pre .command:before {
-  content: attr(data-prompt); 
+  content: attr(data-prompt);
   padding-right: 0.5em;
   color: #999;
 }
 
 .listingblock.terminal pre .command:not([data-prompt]):before {
-  content: "$"; 
+  content: "$";
 }
 
 // overrides for Pygments default styles
@@ -481,7 +481,7 @@ table.pyhltable .linenodiv {
     padding: 0;
     border: 0;
 		font-style: italic;
-		
+
 		&:before {
 		  content:"\00BB";
       font-size:80px;
@@ -491,7 +491,7 @@ table.pyhltable .linenodiv {
       top: auto;
       color: $grey-11;
 		}
-		
+
 		&:after {
 			content: "\00AB";
 			font-size:80px;
@@ -1094,7 +1094,7 @@ span.icon>.fa {
     text-shadow: $icon-text-shadow;
     cursor: default;
   }
-  
+
   .icon-note:before {
     //@extend .fa-info-circle;
     content: "\f05a";
@@ -1102,7 +1102,7 @@ span.icon>.fa {
     //color: $success-color;
     font-family: FontAwesome;
   }
-  
+
   .icon-tip:before {
     // @extend .fa-lightbulb-o;
     content: "\f0eb";
@@ -1110,7 +1110,7 @@ span.icon>.fa {
     //color: $info-color;
     font-family: FontAwesome;
   }
-  
+
   .icon-warning:before {
     // @extend .fa-exclamation-triangle;
     content: "\f071";
@@ -1126,7 +1126,7 @@ span.icon>.fa {
     //color: $alert-color;
     font-family: FontAwesome;
   }
-  
+
   .icon-important:before {
     // @extend .icon-exclamation-circle;
     content: "\f06a";
