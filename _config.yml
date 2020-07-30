@@ -1,18 +1,160 @@
-name: Lived Experience Project
-markdown: kramdown
+# Site settings
+
+title: Lived Experience Project
+email: your-email@example.com
+description: >-
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+  enim ad minim veniam, quis nostrud exercitation ullamco.
+credits: TerraLuna
+author: jeff
+baseurl: ""
+url: "http://lex.dev"
+twitter_username: jsguntzel
+github_username:  jsguntzel
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-asciidoc
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll/tagging
+
+tag_page_layout: tag_page
+tag_page_dir: topic
+tag_permalink_style: pretty
+author_dir: contributors
+author_title_prefix: "Contributor: "
+
+# This is for the editing function in _/includes/improve_content
+# Leave it empty if your site is not on GitHub/GitHub Pages
+improve_content: ''
+
+# This URL points directly to the images directory making
+# things easier to link to images in posts and templates. It needs a slash at the end.
+#
+# Example: <img src="{{ site.urlimg }}{{ post.image.title }}" />
+# Markdown-Example for posts ![Image Text]({{ site.urlimg }}image.jpg)
+#
+urlimg: '/images/'
+
+# Logo size is 600x80 pixels
+logo: "logo.png"
+
+paginate: 5                      # Paginates all X entries
+paginate_path: "blog/page:num"   # Pagination path › Important for blog page in /blog/ to work
+
+
+# Theme works best with Kramdown (using the table of contents function)
+markdown           : kramdown
+permalink          : /:categories/:title/
+highlight          : rouge
+excerpt_separator  : "<!--more-->"
+include            : ['.htaccess']
 kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-gems:
-  - jekyll-redirect-from
-exclude: ['*.yml']
+# Exclude these files from your production _site
+exclude:
+  - .sass-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - INSTALL.md
+  - vendor
+  - '*.yml'
+
+# The language setting is used in /includes/header.html for html-settings
+language: 'en'
+
+# Used › default.html front-matter and compress.html
+# Options › http://jch.penibelst.de
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  profile: false
+  ignore:
+    envs: [development]
+
 defaults:
-  - scope:
-      path: ""
+  -
+    scope:
+      path: ''        # an empty string here means all files in the project
+      type: 'pages'
     values:
-      # layout: override this on a page to use anything other than layout.html
-      layout: layout
-      # title: default value for meta tags, should be overridden on individual pages
-      title: Lived Experience Project
-      # description: default value for meta tags, should be overridden on individual pages
-      #              any html here will be stripped by simple_layout
-      description: The website for the Lived Experience Project.
+      breadcrumb: true
+      show_meta: false  # Hide metadata for all pages
+      # sidebar:        # Possible values › left, right › by default there will be no sidebar
+      comments: false
+      author: jeff     # Default author for pages
+      header:
+        image_fullwidth: lex-courtroom.jpg
+        caption: Artwork by Odera Igbokwe
+        caption_url: https://www.odera.net/
+  -
+    scope:
+      path: 'pages/about/*'        # an empty string here means all files in the project
+      type: 'pages'
+    values:
+      breadcrumb: true
+      show_meta: false  # Hide metadata for all pages
+      # sidebar:        # Possible values › left, right › by default there will be no sidebar
+      comments: false
+      author: jeff     # Default author for pages
+      header:
+        image_fullwidth: lex-healing.jpg
+        caption: Artwork by Odera Igbokwe
+        caption_url: https://www.odera.net/
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+      breadcrumb: false
+      show_meta: true   # Show metadata for all posts
+      # sidebar:        # Possible values › left, right › by default there will be no sidebar
+      comments: false
+      author: jeff     # Default author for posts
+      header:
+        image_fullwidth: lex-healing.jpg
+        caption: Artwork by Odera Igbokwe
+        caption_url: https://www.odera.net/
+
+google_author:             'https://plus.google.com/u/0/xxxxx'
+google_site_verification:  'xxxxx'
+bing_webmastertools_id:    'xxxxx'
+# yandex_site_verification:  ''
+# alexa_verify_id:           ''
+
+og_image:                           'http://images.phlow.de/phlow/phlow_de-logo-512x.png'
+og_locale:                          'en_EN'
+og_type:                            'website'
+
+socialmedia:
+    twitter: xxxxxx
+    facebook: xxxxxxx
+
+# used in _includes/comments
+
+disqus_shortname: livedexperience
+
+sass:
+    sass_dir : _sass
+    style    : :compressed
+    sourcemap: true
+
+# used in _includes/footer_scripts
+
+# google_analytics_tracking_id:
+
+asciidoctor-enabled: false
+asciidoctor:
+  description:
+  attributes:
+    source-highlighter: coderay
+    coderay-css: style
+    icons: font

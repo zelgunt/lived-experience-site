@@ -1,0 +1,14 @@
+# - name: YouTube
+#   url: http://www.youtube.com/LivedExperience
+#   class: icon-youtube
+#   title: "Videos on YouTube"
+
+# - name: Twitter
+#   url: http://twitter.com/xxxxxx
+#   class: icon-twitter
+#   title: "The Lived Experience Project on Twitter"
+
+# - name: Facebook
+#   url: http://www.facebook.com/xxxxxxxx
+#   class: icon-facebook
+#   title: ""

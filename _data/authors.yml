@@ -1,0 +1,56 @@
+# Author details
+#
+# 1. Edit information below
+# 2. Change site author in config.yml
+# 3. Change default post/page authors in config.yml
+#
+# Resource › http://blog.sorryapp.com/blogging-with-jekyll/2014/02/06/adding-authors-to-your-jekyll-site.html
+jeff:
+  name: Jeff Severns Guntzel
+  slug: jeff-severns-guntzel
+  siterole: Contributor
+  uri:
+  email:
+  twitter: "@jsguntzel"
+brett:
+  name: "Brett Terpstra"
+  slug: brett-terpstra
+  siterole: Developer
+  uri:
+  email:
+  twitter: "@ttscoff"
+dominique-morgan:
+  name: "Dominique Morgan"
+  slug: dominique-morgan
+  siterole: Contributor
+  uri:
+  email:
+  twitter:
+racquel-henderson:
+  name: "Racquel Henderson"
+  slug: racquel-henderson
+  siterole: Contributor
+  uri:
+  email:
+  twitter:
+andrew-aleman:
+  name: "Andrew Aleman"
+  slug: andrew-aleman
+  siterole: Contributor
+  uri:
+  email:
+  twitter:
+keith-miller:
+  name: "Keith Miller"
+  slug: keith-miller
+  siterole: Contributor
+  uri:
+  email:
+  twitter:
+doualy-xaykaothao:
+  name: "Doualy Xaykaothao"
+  slug: doualy-xaykaothao
+  siterole: Contributor
+  uri:
+  email:
+  twitter:

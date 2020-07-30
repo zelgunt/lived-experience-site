@@ -1,0 +1,46 @@
+- title: Home
+  url: "/"
+  side: left
+
+- title: About
+  url: "/about/"
+  side: left
+  dropdown:
+  - title: "About TerraLuna"
+    url: "/about/terraluna"
+  - title: "About Lived Experience Project"
+    url: "/about/lex"
+  - title: "Guiding Principles"
+    url: "/about/principles"
+  - title: "About Discover Your Power"
+    url: "/about/dyp"
+
+- title: "Resources"
+  url: "/resources/"
+  side: left
+  dropdown:
+  - title: "Illustrated Consent"
+    url: "/resources/consent/"
+  - title: '"I" statements'
+    url: "/resources/i-statements/"
+  - title: "DYP Resources"
+    url: "/resources/consent/"
+
+- title: "Contributors"
+  url: "/contributors/"
+  side: left
+
+- title: Blog
+  url: "/blog/"
+  side: left
+  dropdown:
+  - title: "Blog Archive"
+    url: "/blog/archive/"
+
+- title: "Search"
+  url: "/search/"
+  side: right
+
+- title: "Contact"
+  url: "/contact/"
+  side: right

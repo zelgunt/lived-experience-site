@@ -1,0 +1,18 @@
+name: Lived Experience Project
+markdown: kramdown
+kramdown:
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+gems:
+  - jekyll-redirect-from
+exclude: ['*.yml']
+defaults:
+  - scope:
+      path: ""
+    values:
+      # layout: override this on a page to use anything other than layout.html
+      layout: layout
+      # title: default value for meta tags, should be overridden on individual pages
+      title: Lived Experience Project
+      # description: default value for meta tags, should be overridden on individual pages
+      #              any html here will be stripped by simple_layout
+      description: The website for the Lived Experience Project.

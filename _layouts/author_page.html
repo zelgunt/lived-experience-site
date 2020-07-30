@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div id="blog-index" class="row">
+	<div class="small-12 columns t30">
+		<h1>{{ page.title }}</h1>
+
+
+		<ul>
+			{% for post in site.posts %}
+			{% if post.author == page.author %}
+			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endif %}
+			{% endfor %}
+		</ul>
+	</div><!-- /.small-12.columns -->
+</div><!-- /.row -->
