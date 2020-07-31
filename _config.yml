@@ -9,7 +9,7 @@ description: >-
 credits:
 author: jeff
 baseurl: ""
-url: "http://staging.livedexperienceproject.org.s3-website-us-east-1.amazonaws.com/"
+url: "http://staging.livedexperienceproject.org.s3-website-us-east-1.amazonaws.com"
 twitter_username: jsguntzel
 github_username:  jsguntzel
 
