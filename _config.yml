@@ -6,10 +6,10 @@ description: >-
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
   enim ad minim veniam, quis nostrud exercitation ullamco.
-credits: TerraLuna
+credits:
 author: jeff
 baseurl: ""
-url: "http://lex.dev"
+url: "http://staging.livedexperienceproject.org.s3-website-us-east-1.amazonaws.com/"
 twitter_username: jsguntzel
 github_username:  jsguntzel
 
