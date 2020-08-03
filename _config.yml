@@ -9,7 +9,7 @@ description: >-
 credits:
 author: jeff
 baseurl: ""
-url: "http://staging.livedexperienceproject.org.s3-website-us-east-1.amazonaws.com"
+url: ""
 twitter_username: jsguntzel
 github_username:  jsguntzel
 
@@ -27,6 +27,9 @@ tag_page_dir: topic
 tag_permalink_style: pretty
 author_dir: contributors
 author_title_prefix: "Contributor: "
+
+audio_base_path: /media/audio
+video_base_path: /media/video
 
 # This is for the editing function in _/includes/improve_content
 # Leave it empty if your site is not on GitHub/GitHub Pages

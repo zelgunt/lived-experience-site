@@ -20,6 +20,7 @@ gallery:
       caption: Gallery example 2
     - image_url: lex-shadows.jpg
       caption: Gallery example 3
+mediaplayer: true
 ---
 You'll find this post in your `_posts` directory. Edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
@@ -87,3 +88,21 @@ See the frontmatter of this post for a demo, then include {% raw %}`{% include g
 {% include gallery %}
 
 To include a terminator at the end of the last paragraph, use {% raw %}`{% eof %}`{% endraw %}. {% eof %}
+
+### Audio player
+
+To include an audio file use {% raw %}`{% audio audio_file_name %}`{% endraw %} in the post/page. If an extension is specified, only that format will be linked. Otherwise it's assumed that you have multiple formats from mp3, wav, ogg, and oga available and any that exist in media/audio with the same base filename will be included in the tag's sources.
+
+For example, if the tag is {% raw %}`{% audio sys078 %}`{% endraw %} and the `/media/audio/` directory contains `sys078.mp3` and `sys078.ogg`, then an HTML5 audio tag with sources for both formats will be created.
+
+{% audio sys078 %}
+
+Using subdirectories is fine, in which case the tag would look like {% raw %}`{% audio subdir/file %}`{% endraw %}.
+
+Add a title after the filename, and optionally include `download=true` to include a download link.
+
+{% raw %}
+    {% audio sys078 Systematic Episode 78 download=true %}
+{% endraw %}
+
+{% audio sys078 Systematic Episode 78 download=true %}
