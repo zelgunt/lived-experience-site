@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About TerraLuna
-permalink: /about/terraluna
+permalink: /about/terraluna/
 breadcrumb: true
 header:
   image_fullwidth: lex-shadows.jpg

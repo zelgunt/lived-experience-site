@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Guiding Principles
-permalink: /about/principles
+permalink: /about/principles/
 header:
   image_fullwidth: lex-healing.jpg
 ---

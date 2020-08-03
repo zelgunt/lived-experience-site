@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About the Lived Experience Project
-permalink: /about/lex
+permalink: /about/lex/
 header:
     image_fullwidth: lex-courtroom.jpg
     caption: Artwork by Odera Igbokwe
