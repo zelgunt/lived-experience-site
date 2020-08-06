@@ -21,3 +21,25 @@ AddType application/dash+xml .mpd
 # For subtitles support
 AddType text/vtt .vtt
 AddType text/srt .srt
+
+# Image handling for opengraph meta
+
+# Try _fb if _tw doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.*)_tw\.(jpg|png|gif) $1_fb.$2 [L]
+
+# Try _sq if _fb doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.*)_fb\.(jpg|png|gif) $1_sq.$2 [L]
+
+# Try _lg if _sq doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.*)_sq\.(jpg|png|gif) $1_lg.$2 [L]
+
+# Try @2x if _lg doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.*)_lg\.(jpg|png|gif) $1@2x.$2 [L]
+
+# Fall back to base image file if no @2x
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.*)@2x\.(jpg|png|gif) $1.$2 [L]

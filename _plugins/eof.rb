@@ -7,7 +7,7 @@ module Jekyll
     end
 
     def render(context)
-      %(<span class="terminator"></span>)
+      %(&nbsp;<span class="terminator"></span>)
     end
   end
 end

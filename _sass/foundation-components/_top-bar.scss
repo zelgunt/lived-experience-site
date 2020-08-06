@@ -349,6 +349,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
         }
 
         // Apply the hover link color when it has that class
+        &:focus:not(.has-form) > a,
         &:hover:not(.has-form) > a {
           background-color: $topbar-link-bg-color-hover;
           @if ($topbar-link-bg-hover) {
@@ -361,6 +362,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
         &.active > a {
           background: $topbar-link-bg-active;
           color: $topbar-link-color-active;
+          &:focus,
           &:hover {
             background: $topbar-link-bg-active-hover;
             color: $topbar-link-color-active-hover;
@@ -429,6 +431,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
               color: $topbar-link-color;
               // line-height: ($topbar-height / 2);
               display: block;
+              &:focus,
               &:hover { background:none; }
             }
           }
@@ -510,6 +513,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
               padding: 0 $topbar-link-padding;
               line-height: $topbar-height;
               background: $topbar-link-bg;
+              &:focus,
               &:hover {
                 background-color: $topbar-link-bg-color-hover;
                 @if ($topbar-link-bg-hover) {
@@ -524,6 +528,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
               line-height: $topbar-height;
               color: $topbar-link-color-active;
               background: $topbar-link-bg-active;
+              &:focus,
               &:hover {
                 background: $topbar-link-bg-active-hover;
                 color: $topbar-link-color-active-hover;
@@ -549,7 +554,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
               @include topbar-hide-dropdown();
             }
           }
-
+          &.not-click:focus,
           &.hover, &.not-click:hover {
             & > .dropdown {
               @include topbar-show-dropdown();
@@ -595,7 +600,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
                 color: $topbar-dropdown-link-color;
                 background: $topbar-dropdown-link-bg;
               }
-
+              &:focus > a:not(.button),
               &:hover > a:not(.button) {
                 color: $topbar-dropdown-link-color-hover;
                 background-color: $topbar-link-bg-color-hover;
@@ -658,6 +663,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
       .no-js .top-bar-section {
         ul li {
           // Apply the hover link color when it has that class
+          &:focus > a,
           &:hover > a {
             background-color: $topbar-link-bg-color-hover;
             @if ($topbar-link-bg-hover) {
@@ -674,6 +680,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
         }
 
         .has-dropdown {
+          &:focus,
           &:hover {
             & > .dropdown {
               @include topbar-show-dropdown();

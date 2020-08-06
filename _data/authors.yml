@@ -1,24 +1,27 @@
 # Author details
-#
-# 1. Edit information below
-# 2. Change site author in config.yml
-# 3. Change default post/page authors in config.yml
-#
-# Resource › http://blog.sorryapp.com/blogging-with-jekyll/2014/02/06/adding-authors-to-your-jekyll-site.html
+
+# The key for the block is the way you will define the author in a post,
+# e.g. `author: jeff`
 jeff:
+  # Displayed name
   name: Jeff Severns Guntzel
+  # Slug for URL
   slug: jeff-severns-guntzel
+  # Define where the author will show up in collection pages
+  # Usually Contributor
   siterole: Contributor
-  uri:
+  # URI, email, and Twitter can be left blank
+  uri: https://forestofthings.com/
   email:
-  twitter: "@jsguntzel"
-brett:
-  name: "Brett Terpstra"
-  slug: brett-terpstra
-  siterole: Developer
-  uri:
-  email:
-  twitter: "@ttscoff"
+  twitter: "jsguntzel"
+  # Summary should be a single line summary of the bio
+  summary: Jeff Severns Guntzel focused on investigative and data-driven projects, as well as engaging readers for other reporting efforts, as idea generators, sources and content contributors.
+  # Use |+ for multiple lines with line breaks
+  # Markdown allowed, use an empty line to break paragraphs
+  bio: |+
+      Jeff Severns Guntzel does journalism for the web, on paper, and occasionally for the radio. He has been known to do journalism from the command line and in comic books.
+      He has worked for really great people at American Public Media, MinnPost, Utne Reader, National Catholic Reporter and Punk Planet magazine. Now he is living the freelance life and loving it very much. Before turning to journalism, Jeff spent years doing humanitarian work in pre-war Iraq. Electronic Iraq, a website he co-founded in 2003 to document the Iraqi experience of war, is archived in the Library of Congress and the British Library. That is a good thing because libraries are great and those libraries are amazing!
+  photo: contributors/jsguntzel.jpg
 dominique-morgan:
   name: "Dominique Morgan"
   slug: dominique-morgan

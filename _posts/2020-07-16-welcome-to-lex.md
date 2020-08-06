@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Welcome to the Lived Experience Project"
-subheadline: Blog
+subheadline: Subhed
 date:   2020-07-16 08:48
 meta_teaser: "Description used for meta tags. Short, no HTML."
 teaser: "Lead in text for summary pages. HTML OK."
@@ -9,10 +9,9 @@ header:
   image_fullwidth: lex-shadows.jpg
   caption: Artwork by Odera Igbokwe
   caption_url: https://www.odera.net/
-categories:
-    - lex
+categories: blog
 tags: [test tag, another tag]
-author: brett
+author: jeff
 gallery:
     - image_url: lex-courtroom.jpg
       caption: Gallery example 1
@@ -87,8 +86,6 @@ See the frontmatter of this post for a demo, then include {% raw %}`{% include g
 
 {% include gallery %}
 
-To include a terminator at the end of the last paragraph, use {% raw %}`{% eof %}`{% endraw %}. {% eof %}
-
 ### Audio player
 
 To include an audio file use {% raw %}`{% audio audio_file_name %}`{% endraw %} in the post/page. If an extension is specified, only that format will be linked. Otherwise it's assumed that you have multiple formats from mp3, wav, ogg, and oga available and any that exist in media/audio with the same base filename will be included in the tag's sources.
@@ -106,3 +103,14 @@ Add a title after the filename, and optionally include `download=true` to includ
 {% endraw %}
 
 {% audio sys078 Systematic Episode 78 download=true %}
+
+
+### Image tag
+
+See `updating-this-site` for details.
+
+{% imgd 2020/08/windowbars.jpg 800 444 "Cell window with light coming through bars" %}
+
+### Terminator
+
+To include a terminator at the end of the last paragraph, use {% raw %}`{% eof %}`{% endraw %}.{% eof %}

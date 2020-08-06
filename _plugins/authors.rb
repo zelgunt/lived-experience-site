@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module Jekyll
+  # Generator plugin for author pages
   class AuthorPageGenerator < Generator
     safe true
 
@@ -24,8 +27,11 @@ module Jekyll
       self.read_yaml(File.join(base, '_layouts'), 'author_page.html')
       self.data['author'] = author
 
-      author_name = site.data['authors'][author]['name']
-      self.data['title'] = "#{author_name}"
+      author = site.data['authors'][author]
+
+      self.data['title'] = author['name']
+      self.data['teaser'] = author['summary']
+      self.data['description'] = author['bio']
     end
   end
 end

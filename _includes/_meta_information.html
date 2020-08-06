@@ -1,20 +1,37 @@
+			<!-- Look the author details up from the site config. -->
+			{% assign author = site.data.authors[page.author] %}
+			<!-- Output author details if some exist. -->
+			{% if author %}
+				<div class="author-meta author h-card p-author" role="contentinfo">
+				  <div class="postUser">
+				  	{% if author.photo %}
+				    <div class="postUser__portrait">
+				      <a href="/contributors/{{ author.slug }}">
+				        <img class="u-photo headshot" src="{{ site.url | join_path: 'images', author.photo }}" alt="Photo of {{ author.name }}" width="150" height="150">
+				  	  </a>
+				    </div>
+				    {% endif %}
+				    <div class="postUser__name">
+				    	<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="p-name"><a href="/contributors/{{ author.slug }}">{{ author.name }}</a></span></span>
+				    </div>
+				  </div>
+				  <div class="postBody">
+				    <div class="postBody__content">
+				      <p class="bio p-note">{{ author.summary }}&nbsp;<a href="/contributors/{{ author.slug }}">&rarr;</a></p>
+				    </div>
+				  </div>
+				</div>
+			{% endif %}
+
 			<div id="page-meta" class="t30">
 				<p>
-					<!-- Look the author details up from the site config. -->
-					{% assign author = site.data.authors[page.author] %}
-					<!-- Output author details if some exist. -->
-					{% if author %}
-					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="/contributors/{{ author.slug }}" target="_blank">{{ author.name }}</a></span>
-				</span>
-				{% endif %}
-
 				{% if page.date %}
 				<time class="icon-calendar pr20" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"> {{ page.date | date: "%Y-%m-%d" }}</time>
 				{% endif %}
 
-				{% if page.categories != empty %}<span class="icon-archive pr20"> {{ page.categories | join: ' &bull; ' | upcase }}{% endif %}</span>
+				{% if page.categories != empty %}<span class="icon-archive pr20"> {{ page.categories | join: ' • ' | upcase }}{% endif %}</span>
 				<br />
-				<span class="pr20 tags">{% for tag in page.tags %}<a class="tag" href="/topic/{{tag | slugify}}">{{tag}}</a>{% endfor %}</span>
+				<span class="pr20 tags">{% for tag in page.tags %}<a class="tag p-category" href="/{{ site.tag_page_dir}}/{{tag | slugify}}">{{tag}}</a>{% endfor %}</span>
 			</p>
 
 			{% if page.collection == "posts" %}

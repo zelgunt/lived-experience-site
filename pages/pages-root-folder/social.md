@@ -1,16 +1,8 @@
 ---
 layout: page
-title: "Contact"
-meta_title: "Contact the Lived Experience Project"
-teaser: "Want to get in touch with us? Here's how."
-permalink: "/contact/"
+permalink: /social/
+title: Social Networks
 ---
-Not sure what we want on this page yet, you know?
-
-A list of email addresses?
-
-A contact form? Wufoo?
-
 <ul class="no-bullet">
 {% for network_item in site.data.socialmedia %}
   {% if network_item.url contains 'http' %}{% assign domain = '' %}{% else %}{% capture domain %}{{ site.url }}{{ site.baseurl }}{% endcapture %}{% endif %}

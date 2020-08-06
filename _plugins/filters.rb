@@ -40,8 +40,67 @@ module LEXLiquidFilters
     end
   end
 
+  # Returns a datetime if the input is a string
+  def datetime(date)
+    if date.class == String
+      date = Time.parse(date)
+    end
+    date
+  end
+
+  # Returns an ordidinal date eg July 22 2007 -> July 22nd 2007
+  def ordinalize(date)
+    date = datetime(date)
+    "#{date.strftime('%b')} #{ordinal(date.strftime('%e').to_i)}, #{date.strftime('%Y')}"
+  end
+
+  def timestamp(date)
+    date = datetime(date)
+    date.strftime('%s')
+  end
+
+  # Returns an ordinal number. 13 -> 13th, 21 -> 21st etc.
+  def ordinal(number)
+    if (11..13).include?(number.to_i % 100)
+      "#{number}<span>th</span>"
+    else
+      case number.to_i % 10
+      when 1; "#{number}<span>st</span>"
+      when 2; "#{number}<span>nd</span>"
+      when 3; "#{number}<span>rd</span>"
+      else    "#{number}<span>th</span>"
+      end
+    end
+  end
+
+  # Format date and add time string
+  def format_datetime(date, format)
+    date_string = format_date(date, format)
+    date = datetime(date)
+    time_string = date.strftime('%-I:%M %p')
+    %Q{#{date_string} at #{time_string}}
+  end
+
+  # Formats date either as ordinal or by given date format
+  # Adds %o as ordinal representation of the day
+  def format_date(date, format)
+    date = datetime(date)
+    if format.nil? || format.empty? || format == "ordinal"
+      date_formatted = ordinalize(date)
+    else
+      date_formatted = date.strftime(format)
+      date_formatted.gsub!(/%o/, ordinal(date.strftime('%e').to_i))
+    end
+    date_formatted
+  end
+
+  def check_sticky(date)
+    date = datetime(date).strftime('%Y%m%d')
+    return date == Time.now.strftime('%Y%m%d')
+  end
+
   def should_search(input)
-    if input =~ /(^\/?(archives?|series|downloads|topics?|categor(y|ies)|page|search|404|index\.html)|\.(xml|rb|jpg|png|gif|txt|md|json|css)$)/
+    if input =~ /(^\/?(archives?|series|downloads|topics?|categor(y|ies)|page|search|404|index\.html)|\.(xslt|xml|rb|jpg|png|gif|txt|md|json|css)$)/
       false
     else
       true
@@ -113,7 +172,7 @@ module LEXLiquidFilters
     # truncate the description
     desc = CGI.escapeHTML(trunc(blocks[0],200).gsub(/\n/,' ').gsub(/\s+/,' ').strip)
     # if blank, return site name
-    desc == "" ? "Lived Experience Project." : desc
+    desc == "" ? "The Lived Experience Project." : desc
   end
 
   # generate a truncated description
@@ -124,7 +183,7 @@ module LEXLiquidFilters
     desc = CGI.escapeHTML(trunc(blocks.join(" "),2500).gsub(/[\r\n\t]/,' ').squeeze(" ").strip)
     desc.gsub!(/\^/,"&#2C6;")
     # if blank, return site name
-    desc == "" ? "Lived Experience Project" : desc
+    desc == "" ? "The Lived Experience Project" : desc
   end
 
   def expand_url(input)
@@ -156,14 +215,84 @@ module LEXLiquidFilters
   # generate a list of keywords for the post
   def keywords(input)
     # words to ignore
-    blockwords = ["1","2","3","4","5","6","7","8","9","0","one","two","three","four","five","about","actually","always","even","given","into","just","not","i'm","that's","its","it's","aren't","we've","i've","didn't","don't","the","of","to","and","a","in","is","it","you","that","he","was","for","on","are","with","as","i","his","they","be","at","one","have","this","from","or","had","by","hot","but","some","what","what's","there","we","can","out","were","all","your","you're","yours","when","up","use","how","said","an","each","she","which","do","their","if","will","way","many","then","them","would","like","so","these","her","see","him","has","more","could","go","come","did","my","no","get","me","say","too","here","must","such","try","us","own","oh","any","you'll","also","than","those","though","thing","things","january","february","march","april","may","june","july","august","september","october","november","december","post","know","link","never","should","yeah","go","look","need","last","seen","us","befor","well","we'll","make","much","tweet","show","want","been","follow","around","very","pretty","unless","other","probably","update","nope","seem","copy","really","case","date","something","start","still","day","turn","total","perfect","notice","plain","become","back","include","type","might","already","read","part","find","someone","most","see","hard","tell","miss","lately","down","good","instead","size","after","actual","manage","anything","least","usual","wait","site","past","there","less","exactly","set","gone","without","better","sweet","power","affect","over","open","week","time","result","dai","i'll","i've","i'm","i'd","they","they'll","they've"]
-    blockwords += ["a", "abeyance", "absence", "absolutely", "abundance", "abundantly", "accede", "accelerate", "accentuate", "accommodation", "accompanying", "accomplish", "accordance", "according", "accordingly", "acknowledge", "acquaint", "acquiesce", "acquire", "actually", "addition", "additional", "adjacent", "adjustment", "admissible", "advance", "advantageous", "advise", "affix", "afford", "afforded", "aforesaid", "aggregate", "aligned", "all", "alleviate", "allocate", "along", "alternative", "alternatively", "am", "ameliorate", "amendment", "an", "analysis", "and", "annum", "anticipate", "apparent", "applicant", "application", "appreciable", "apprise", "appropriate", "approximately", "are", "as", "ascertain", "assemble", "assistance", "at", "attempt", "attend", "attention", "attributable", "authorise", "authority", "axiomatic", "basically", "be", "behalf", "being", "belated", "beneficial", "bestow", "breach", "but", "by", "calculate", "case", "cases", "cease", "circumvent", "clarification", "combine", "combined", "commence", "communicate", "competent", "compile", "complete", "completion", "comply", "component", "comprise", "compulsory", "conceal", "concerned", "concerning", "conclusion", "concur", "condition", "conjunction", "connection", "consequence", "consequently", "considerable", "consideration", "constitute", "construe", "consult", "consumption", "contemplate", "contrary", "correct", "correspond", "costs", "counter", "course", "courteous", "cumulative", "current", "currently", "customary", "date", "day", "deduct", "deem", "defer", "deficiency", "delay", "delete", "demonstrate", "denote", "depict", "designate", "desire", "despatch", "despite", "determine", "detrimental", "difficulties", "diminish", "disburse", "discharge", "disclose", "disconnect", "discontinue", "discrete", "discretion", "discuss", "dispatch", "disseminate", "documentation", "domiciled", "dominant", "drawn", "due", "duration", "during", "dwelling", "each", "early", "economical", "effect", "eligible", "elucidate", "emphasise", "empower", "enable", "enclosed", "encounter", "end", "endeavour", "enquire", "enquiry", "ensure", "entitlement", "envisage", "equal", "equivalent", "erroneous", "establish", "evaluate", "event", "every", "evince", "ex", "exceptionally", "excess", "excessive", "exclude", "excluding", "exclusively", "exempt", "existing", "expedite", "expeditiously", "expenditure", "expire", "extant", "extent", "extremely", "extremity", "fabricate", "facilitate", "fact", "factor", "failure", "far", "final", "finalise", "find", "following", "for", "formulate", "forthwith", "forward", "frequently", "from", "furnish", "further", "furthermore", "future", "generate", "give", "grant", "grounds", "have", "henceforth", "hereby", "herein", "hereinafter", "hereof", "hereto", "heretofore", "hereunder", "herewith", "hitherto", "hold", "hope", "i", "if", "illustrate", "immediately", "implement", "imply", "in", "inappropriate", "inception", "incorporating", "incurred", "indicate", "inform", "initially", "initiate", "insert", "instances", "intend", "intents", "intimate", "irrespective", "is", "issue", "it", "its", "jeopardise", "known", "large", "last", "least", "liaise", "lieu", "like", "lines", "locality", "locate", "magnitude", "majority", "mandatory", "manner", "manufacture", "marginal", "material", "materialise", "matter", "may", "means", "merchandise", "mind", "minimum", "mislay", "modification", "moment", "month", "months", "moreover", "near", "negligible", "neighbourhood", "nevertheless", "not", "notify", "notwithstanding", "number", "numerous", "objective", "obligatory", "obtain", "obviously", "occasion", "occasioned", "occasions", "of", "of/that", "officio", "on", "one", "one's", "operate", "opinion", "opportunity", "optimum", "option", "or", "order", "ordinarily", "other", "otherwise", "our", "outstanding", "owing", "own", "partially", "participate", "particulars", "per", "percentage", "perform", "period", "permissible", "permit", "personnel", "persons", "peruse", "place", "please", "pleasure", "possess", "possessions", "practically", "predominant", "prescribe", "present", "preserve", "previous", "principal", "prior", "proceed", "procure", "profusion", "progress", "prohibit", "projected", "prolonged", "promptly", "promulgate", "proportion", "provide", "provided", "provisions", "proximity", "purchase", "purpose", "purposes", "pursuant", "qualify", "question", "quite", "really", "reason", "receipt", "reconsider", "records", "reduce", "reduction", "refer", "reference", "referred", "regard", "regarding", "regards", "regulation", "reimburse", "reiterate", "relating", "relation", "remain", "remainder", "remittance", "remuneration", "render", "represent", "request", "requested", "require", "requirements", "reside", "residence", "respect", "restriction", "retain", "review", "revised", "say", "scrutinise", "select", "settle", "should", "similarly", "solely", "something", "specified", "state", "statutory", "subject", "submit", "subsequent", "subsequently", "substantial", "substantially", "such", "sufficient", "sum", "supplement", "supplementary", "supply", "take", "tenant", "terminate", "that", "the", "thereafter", "thereby", "therein", "thereof", "thereto", "things", "this", "thus", "time", "to", "total", "transfer", "transmit", "trust", "ultimately", "unavailability", "undernoted", "undersigned", "understood", "undertake", "uniform", "unilateral", "unoccupied", "until", "upon", "utilisation", "utilise", "variation", "very", "view", "virtually", "visualise", "ways", "we", "whatsoever", "when", "whensoever", "whereas", "whether", "which", "with", "would", "you", "your", "yourself", "zone"]
-    blockwords += ["alignleft","alignright","aligncenter","allowfullscreen"]
-    # strip tags/markdown, create an array of words, delete blockwords and short words, combine remaining elements into string
+    blockwords = %w[1 2 3 4 5 6 7 8 9 0 one two three four five about actually always even given into
+                    just not i'm that's its it's aren't we've i've didn't don't the of to and a in is it
+                    you that he was for on are with as i his they be at one have this from or had by hot
+                    but some what what's there we can out were all your you're yours when up use how said
+                    an each she which do their if will way many then them would like so these her see him
+                    has more could go come did my no get me say too here must such try us own oh any
+                    you'll also than those though thing things january february march april may june
+                    july august september october november december post know link never should yeah go
+                    look need last seen us befor well we'll make much tweet show want been follow around
+                    very pretty unless other probably update nope seem copy really case date something
+                    start still day turn total perfect notice plain become back include type might
+                    already read part find someone most see hard tell miss lately down good instead
+                    size after actual manage anything least usual wait site past there less exactly
+                    set gone without better sweet power affect over open week time result dai i'll
+                    i've i'm i'd they they'll they've]
+    blockwords += %w[ a abeyance absence absolutely abundance abundantly accede accelerate accentuate
+                      accommodation accompanying accomplish accordance according accordingly acknowledge
+                      acquaint acquiesce acquire actually addition additional adjacent adjustment
+                      admissible advance advantageous advise affix afford afforded aforesaid aggregate
+                      aligned all alleviate allocate along alternative alternatively am ameliorate
+                      amendment an analysis and annum anticipate apparent applicant application
+                      appreciable apprise appropriate approximately are as ascertain assemble assistance
+                      at attempt attend attention attributable authorise authority axiomatic basically
+                      be behalf being belated beneficial bestow breach but by
+                      calculate case cases cease circumvent clarification combine combined commence
+                      communicate competent compile complete completion comply component comprise compulsory
+                      conceal concerned concerning conclusion concur condition conjunction connection consequence
+                      consequently considerable consideration constitute construe consult consumption contemplate
+                      contrary correct correspond costs counter course courteous cumulative current currently
+                      customary date day deduct deem defer deficiency delay delete
+                      demonstrate denote depict designate desire despatch despite determine detrimental
+                      difficulties diminish disburse discharge disclose disconnect discontinue discrete discretion
+                      discuss dispatch disseminate documentation domiciled dominant drawn due duration
+                      during dwelling each early economical effect eligible elucidate emphasise
+                      empower enable enclosed encounter end endeavour enquire enquiry ensure
+                      entitlement envisage equal equivalent erroneous establish evaluate event every
+                      evince ex exceptionally excess excessive exclude excluding exclusively exempt
+                      existing expedite expeditiously expenditure expire extant extent extremely extremity
+                      fabricate facilitate fact factor failure far final finalise find
+                      following for formulate forthwith forward frequently from furnish further
+                      furthermore future generate give grant grounds have henceforth hereby
+                      herein hereinafter hereof hereto heretofore hereunder herewith hitherto hold
+                      hope i if illustrate immediately implement imply in inappropriate
+                      inception incorporating incurred indicate inform initially initiate insert instances
+                      intend intents intimate irrespective is issue it its jeopardise
+                      known large last least liaise lieu like lines locality
+                      locate magnitude majority mandatory manner manufacture marginal material materialise
+                      matter may means merchandise mind minimum mislay modification moment
+                      month months moreover near negligible neighbourhood nevertheless not notify
+                      notwithstanding number numerous objective obligatory obtain obviously occasion occasioned
+                      occasions of of/that officio on one one's operate opinion
+                      opportunity optimum option or order ordinarily other otherwise our
+                      outstanding owing own partially participate particulars per percentage perform
+                      period permissible permit personnel persons peruse place please pleasure
+                      possess possessions practically predominant prescribe present preserve previous principal
+                      prior proceed procure profusion progress prohibit projected prolonged promptly
+                      promulgate proportion provide provided provisions proximity purchase purpose purposes
+                      pursuant qualify question quite really reason receipt reconsider records
+                      reduce reduction refer reference referred regard regarding regards regulation
+                      reimburse reiterate relating relation remain remainder remittance remuneration render
+                      represent request requested require requirements reside residence respect restriction
+                      retain review revised say scrutinise select settle should similarly
+                      solely something specified state statutory subject submit subsequent subsequently
+                      substantial substantially such sufficient sum supplement supplementary supply take
+                      tenant terminate that the thereafter thereby therein thereof thereto
+                      things this thus time to total transfer transmit trust
+                      ultimately unavailability undernoted undersigned understood undertake uniform
+                      unilateral unoccupied until upon utilisation utilise variation very view virtually
+                      visualise ways we whatsoever when whensoever whereas whether which with would you
+                      your yourself zone]
+    blockwords += %w[alignleft alignright aligncenter allowfullscreen]
+    # strip tags/markdown, create an array of words,
+    # delete blockwords and short words,
+    # combine remaining elements into string
     input = strip_tags(input.force_encoding('utf-8').strip)
-    arr = input.gsub(/[^A-Z ']/i,' ').squeeze(' ').split(" ")
+    arr = input.gsub(/[^A-Z ']/i, ' ').squeeze(' ').split(' ')
     arr.uniq!
-    arr.delete_if{|word| word.nil? || word.length < 5 || blockwords.include?(word.downcase) }
+    arr.delete_if { |word| word.nil? || word.length < 5 || blockwords.include?(word.downcase) }
     # arr.map!{|word|
     #   if word.length > 7
     #     Text::PorterStemming.stem(word).downcase
@@ -172,11 +301,16 @@ module LEXLiquidFilters
     #   end
     # }
 
-    arr.sort.map{|word| %Q{"#{CGI.escapeHTML(word.downcase.strip)}"}}.slice(0,200).join(",").gsub(/(^,|,$)/,'')
+    arr.sort!
+    arr.map! do |word|
+      %("#{CGI.escapeHTML(word.downcase.strip)}")
+    end
+
+    arr.slice(0,200).join(',').gsub(/(^,|,$)/, '')
   end
 
   # remove all HTML tags and smart quotes
-  def strip_tags(html,decode=true)
+  def strip_tags(html, decode = true)
     begin
       out = CGI.unescapeHTML(html.
         gsub(/<(script|style|pre|code|figure).*?>.*?<\/\1>/im, '').
@@ -270,7 +404,7 @@ module LEXLiquidFilters
       taglist = tags.map {|tag|
         %Q{"#{tag}"}
       }.join(',')
-      %Q{[#{taglist}]}
+      %Q{#{taglist}}
     end
   end
 
@@ -285,6 +419,15 @@ module LEXLiquidFilters
     result += date.strftime('<span class="year">%Y</span> ')
     result
   end
+
+  def join_path(path, *paths)
+    File.join(path, paths) rescue path
+  end
+
+  def og_suffix(url, suffix)
+    url.sub(/(_(tw|fb|lg|sq))?\.(jpe?g|png|gif)$/, "_#{suffix}.\\3")
+  end
+
   Liquid::Template.register_filter self
 end
 

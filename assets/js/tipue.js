@@ -1,4 +1,3 @@
-
 /*
 Tipue Search 3.0
 Copyright (c) 2013 Tipue
@@ -6,31 +5,10 @@ Tipue Search is released under the MIT License
 http://www.tipue.com/search
 */
 
-var tipuesearch_stop_words = ["and", "be", "by", "do", "for", "he", "how", "if", "is", "it", "my", "not", "of", "or", "the", "to", "up", "what", "when"];
-
-var tipuesearch_replace = {"words": [
-     {"word": "tipua", replace_with: "tipue"},
-     {"word": "javscript", replace_with: "javascript"}
-]};
-
-var tipuesearch_stem = {"words": [
-     {"word": "e-mail", stem: "email"},
-     {"word": "javascript", stem: "script"},
-     {"word": "javascript", stem: "js"}
-]};
-
-
-/*
-Tipue Search 3.0
-Copyright (c) 2013 Tipue
-Tipue Search is released under the MIT License
-http://www.tipue.com/search
-*/
-
-var btsearch_stop_words = ["abey","about","abov","absenc","absolut","abund","abundantli","acced","acceler","accentu","accommod","accompani","accomplish","accord","accordingli","acknowledg","acquaint","acquiesc","acquir","across","actual","addit","adjac","adjust","admiss","advanc","advantag","advis","affect","affix","afford","aforesaid","after","again","against","aggreg","align","aligncent","alignleft","alignright","all","allevi","alloc","allowfullscreen","almost","alon","along","alreadi","also","altern","although","alwai","amelior","amend","among","analysi","and","ani","annum","anoth","anticip","anybodi","anyon","anyth","anywher","appar","applic","appreci","appris","appropri","approxim","april","area","arent","around","ascertain","ask","assembl","assist","attempt","attend","attent","attribut","august","author","authoris","awai","axiomat","back","basic","becam","becaus","becom","been","befor","began","behalf","behind","belat","benefici","best","bestow","better","between","big","both","breach","but","calcul","came","can","cannot","cant","case","ceas","certain","certainli","circumv","clarif","clear","clearli","combin","come","commenc","commun","compet","compil","complet","compli","compon","compris","compulsori","conceal","concern","conclus","concur","condit","conjunct","connect","consequ","consider","constitut","constru","consult","consumpt","contempl","contrari","copi","correct","correspond","cost","could","counter","cours","courteou","cumul","current","customari","dai","date","decemb","deduct","deem","defer","defici","delai","delet","demonstr","denot","depict","design","desir","despatch","despit","determin","detriment","did","didnt","differ","difficulti","diminish","disburs","discharg","disclos","disconnect","discontinu","discret","discuss","dispatch","dissemin","document","doe","domicil","domin","done","dont","down","drawn","due","durat","dure","dwell","each","earli","econom","effect","either","elig","elucid","emphasis","empow","enabl","enclos","encount","end","endeavour","enough","enquir","enquiri","ensur","entitl","envisag","equal","equival","erron","establish","evalu","even","evenli","event","ever","everi","everybodi","everyon","everyth","everywher","evinc","exactli","exception","excess","exclud","exclus","exempt","exist","expedit","expediti","expenditur","expir","extant","extent","extrem","fabric","face","facilit","fact","factor","failur","far","februari","felt","few","final","finalis","find","first","five","follow","for","formul","forthwith","forward","four","frequent","from","full","fulli","furnish","further","furthermor","futur","gave","gener","get","give","given","gone","good","got","grant","great","greater","greatest","ground","group","had","hard","have","henceforth","her","here","herebi","herein","hereinaft","hereof","hereto","heretofor","hereund","herewith","herself","high","higher","highest","him","himself","hitherto","hold","hope","hot","how","howev","ill","illustr","immedi","implement","impli","import","inappropri","incept","includ","incorpor","incur","indic","inform","initi","insert","instanc","instead","intend","intent","interest","intim","into","irrespect","issu","itself","januari","jeopardis","juli","june","just","keep","kind","knew","know","known","larg","last","late","later","latest","least","less","let","liais","lieu","like","line","link","lion","local","locat","lol","long","longer","longest","look","made","magnitud","mai","major","make","man","manag","mandatori","mani","manner","manufactur","march","margin","materi","materialis","matter","mean","member","men","merchandis","might","mind","minimum","mislai","miss","modif","moment","month","more","moreov","most","mostli","much","must","myself","near","necessari","need","neglig","neighbourhood","never","nevertheless","new","newer","newest","next","nobodi","non","noon","nope","not","noth","notic","notifi","notwithstand","novemb","now","nowher","number","numer","object","obligatori","obtain","obvious","occas","octob","of/that","off","officio","often","old","older","oldest","onc","onli","open","oper","opinion","opportun","optimum","option","order","ordinarili","other","otherwis","our","out","outstand","over","own","part","partial","particip","particular","past","per","percentag","perfect","perform","perhap","period","permiss","permit","person","personnel","perus","place","plain","pleas","pleasur","point","possess","possibl","post","power","practic","predomin","prescrib","present","preserv","pretti","previou","princip","prior","probabl","problem","proce","procur","profus","progress","prohibit","project","prolong","promptli","promulg","proport","provid","provis","proxim","purchas","purpos","pursuant","put","qualifi","question","quit","rather","read","realli","reason","receipt","reconsid","record","reduc","reduct","refer","regard","regul","reimburs","reiter","relat","remain","remaind","remitt","remuner","render","repres","request","requir","resid","respect","restrict","result","retain","review","revis","right","room","sai","said","same","saw","scrutinis","second","see","seem","seen","select","septemb","set","settl","sever","shall","she","should","show","side","similarli","sinc","site","size","small","smaller","smallest","sole","some","somebodi","someon","someth","somewher","specifi","start","state","statutori","still","subject","submit","subsequ","substanti","such","suffici","sum","supplement","supplementari","suppli","sure","sweet","take","taken","tell","tenant","termin","than","that","the","thei","their","them","then","there","thereaft","therebi","therefor","therein","thereof","thereto","these","theyll","theyv","thi","thing","think","those","though","thought","three","through","thu","time","todai","togeth","too","took","total","toward","transfer","transmit","trust","try","turn","tweet","two","type","ultim","unavail","under","undernot","undersign","understood","undertak","uniform","unilater","unless","unoccupi","until","updat","upon","usual","utilis","variat","veri","view","virtual","visualis","wai","wait","want","week","well","went","were","weve","what","whatsoev","when","whensoev","where","wherea","whether","which","while","who","whole","whose","why","will","with","within","without","work","would","yeah","year","yet","you","youll","young","younger","youngest","your","yourself","youv","zone"];
+var btsearch_stop_words = [];
 
 var btsearch_replace = {"words": [
-     {"word": "trpstra", replace_with: "terpstra"}
+     {"word": "expernce", replace_with: "experience"}
 ]};
 
 var btsearch_stem = {"words": [
@@ -65,7 +43,7 @@ var btsearch_stem = {"words": [
                'mode'                   : 'static',
                'liveDescription'        : '*',
                'liveContent'            : '*',
-               'contentLocation'        : 'btsearch/btsearch_content.json'
+               'contentLocation'        : 'search/search.json'
 
           }, options);
 
@@ -453,8 +431,9 @@ var btsearch_stem = {"words": [
      $('#typeahead').btsearch({
        'show': 50,
        'mode': 'json',
-       'contentLocation': '/search/bt.json',
-       'showURL': true
+       'contentLocation': '/search/search.json',
+       'descriptiveWords': 25,
+       'showURL': false
      });
 
 })(jQuery);

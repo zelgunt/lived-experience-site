@@ -5,22 +5,11 @@
 # Syntax {% audio url/to/mp3,ogg,blank ["Title"] %}
 #
 # Example (creates both ogg and mp3 sources because no extension is given):
-# {% audio /share/junkyangel "Junky Angel" %}
-#
-#
-# Output:
-# <figure class="audio">
-#   <audio controls="true">
-#       <source src="/share/JunkyAngel.mp3" type="audio/mp3">
-#       <source src="/share/JunkyAngel.ogg" type="audio/ogg">
-#       HTML5 audio not supported
-#   </audio>
-#   <figcaption>Junky Angel</figcaption>
-# </figure>
+# {% audio /share/myaudiofile "My Audio File" download=true %}
 #
 
 module Jekyll
-
+  # Class for Jekyll {% audio %} tag
   class AudioTag < Liquid::Tag
     @mp3 = nil
     @ogg = nil
@@ -74,25 +63,25 @@ module Jekyll
         @oga = File.join(basedir, @oga) if @oga
         @wav = File.join(basedir, @wav) if @wav
         if @mp3 && audio_exist?(@mp3)
-          audio += %Q{<source src="#{@mp3}" type="audio/mp3">}
+          audio += %(<source src="#{@mp3}" type="audio/mp3">)
         end
         if @ogg && audio_exist?(@ogg)
-          audio += %Q{<source src="#{@ogg}" type="audio/ogg">}
+          audio += %(<source src="#{@ogg}" type="audio/ogg">)
         end
         if @oga && audio_exist?(@oga)
-          audio += %Q{<source src="#{@oga}" type="audio/oga">}
+          audio += %(<source src="#{@oga}" type="audio/oga">)
         end
         if @wav && audio_exist?(@wav)
-          audio += %Q{<source src="#{@wav}" type="audio/wav">} if @wav
+          audio += %(<source src="#{@wav}" type="audio/wav">) if @wav
         end
-        audio += "HTML5 audio not supported </audio>"
+        audio += 'HTML5 audio not supported </audio>'
         if @mp3 && @download
           dl_link = %( <a href="#{@mp3}" title="Download #{@title}">Download</a>)
         else
           dl_link = ''
         end
         audio += "<figcaption>#{@title}#{dl_link}</figcaption>" if @title || @download
-        audio += "</figure>"
+        audio += '</figure>'
       else
         "Error processing input, expected syntax: {% audio url/to/mp3,ogg,blank [\"Title\"] %}"
       end
