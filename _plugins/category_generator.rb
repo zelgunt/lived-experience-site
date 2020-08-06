@@ -171,7 +171,7 @@ module CategoryFilters
   def category_links(categories)
     dir = @context.registers[:site].config['category_dir']
     categories = categories.sort!.map do |item|
-      "<a class='category' href='#{dir}/#{item.gsub(/ +/, '-').gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase}/'>#{item.upcase}</a>"
+      "<a class='category' href='#{dir}/#{item.gsub(/ +/, '-').gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase}/'>#{item}</a>"
     end
 
     case categories.length
@@ -180,7 +180,7 @@ module CategoryFilters
     when 1
       categories[0].to_s
     else
-      "#{categories[0...-1].join(', ')}, #{categories[-1]}"
+      categories.join(', ')
     end
   end
 
@@ -198,7 +198,11 @@ module CategoryFilters
 
   def primary_category(cats)
     if cats
-      cats.delete_if { |cat| cat =~ /^Blog$/i }.first
+      if cats.length > 1
+        cats.dup.delete_if { |cat| cat =~ /^Blog$/i }.first
+      else
+        cats.first
+      end
     else
       ''
     end

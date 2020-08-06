@@ -27,7 +27,7 @@ module Jekyll
       tag_title_prefix = site.config['tag_title_prefix'] || 'Posts Tagged &ldquo;'
       tag_title_suffix = site.config['tag_title_suffix'] || '&rdquo;'
       # self.data['title'] = "#{tag_title_prefix}#{tag}#{tag_title_suffix}"
-      self.data['title'] = tag
+      self.data['title'] = tag.split(/ /).map {|t| t.capitalize }.join(' ')
       self.data['posts'] = site.tags[tag]
     end
 

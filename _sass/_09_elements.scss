@@ -216,7 +216,7 @@ img.lazy {
 }
 
 .container-secondary {
-  background: $footer-bg;
+  background: darken($secondary-color, 14%);
   color: $white;
 
   h2,
@@ -229,6 +229,11 @@ img.lazy {
 
   a {
     color: lighten($secondary-color, 50%);
+
+    &:focus,
+    &:hover {
+      color: lighten($primary-color, 50%);
+    }
   }
 
   .homepage__post-hero-subhed {
@@ -237,13 +242,35 @@ img.lazy {
 
   &.category-posts {
     padding: .5ch 1ch;
-    border-radius: 10px;
+    border-radius: 4px;
   }
 }
 
-/* ------------- *
- * Video embeds  *
- * ------------- */
+/* ------------------- *
+ * Audio/Video embeds  *
+ * ------------------- */
+
+audio {
+  width: 100%;
+}
+
+.audio {
+  figcaption {
+    font-size: .9em;
+    font-style: italic;
+    line-height: .5;
+
+    a {
+      float: right;
+      color: $link-color;
+
+      &:hover {
+        color: $link-hover-color;
+        border-bottom: 0;
+      }
+    }
+  }
+}
 
 .bt-video-container {
   clear: both;
@@ -308,3 +335,4 @@ img.lazy {
     opacity: 1;
   }
 }
+

@@ -25,10 +25,10 @@ widget3:
   image: lex-shadows-thumb.jpg
   text: Again, these are just placeholders. I'm repeating myself now. And I'm still unsure we need three, if we need any at all. I need more content.
 
-callforaction:
-  url: /newsletter/
-  text: Inform me about updates ›
-  style: alert
+# callforaction:
+#   url: /newsletter/
+#   text: Inform me about updates ›
+#   style: alert
 permalink: /index.html
 
 breadcrumb: false
