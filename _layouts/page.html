@@ -1,26 +1,19 @@
 ---
 layout: default
-format: post
+format: page
 ---
 <div class="row t30">
 	<div class="medium-8 columns{% if page.sidebar == NULL %} medium-offset-2 end{% endif %}{% if page.sidebar == "left" %} medium-push-4{% endif %}">
 		<article itemscope itemtype="http://schema.org/Article">
 			<header>
 				{% if page.image.title %}
-				<figure>
-					<img src="{{ site.urlimg }}{{ page.image.title }}" width="970" alt="{{ page.title | escape_once }}" itemprop="image">
-
-					{% if page.image.caption_url and page.image.caption %}
-					<figcaption class="text-right">
-						<a href="{{ page.image.caption_url }}">{{ page.image.caption }}</a>
-					</figcaption>
-					{% elsif page.image.caption %}
-					<figcaption class="text-right">
-						{{ page.image.caption }}
-					</figcaption>
+					{% if page.image.caption %}
+						{{ page.image.title | to_img: 'banner-image', 970, 0, 'Banner image', page.image.caption }}
+					{% else %}
+						{{ page.image.title | to_img: 'banner-image', 970, 0, 'Banner image' }}
 					{% endif %}
-				</figure>
 				{% endif %}
+
 
 				<div itemprop="name">
 					{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
@@ -37,6 +30,10 @@ format: post
 
 			<div itemprop="articleSection" class="content">
 			{{ content }}
+
+			{% if page.categories %}
+			{% include _category_posts.html %}
+			{% endif %}
 			</div>
 
 			{% if page.show_meta == true %}

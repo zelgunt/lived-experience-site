@@ -24,26 +24,24 @@ Check typography variables › _3_typography_settings.scss
 /* Links
 ------------------------------------------------------------------- */
 
-a,
-a:link {
-  transition: all .4s;
+a {
+  transition: color .2s linear;
+
+  &:visited {
+    border-bottom: $grey-2;
+  }
+
+  &:focus,
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  &:active {
+    color: lighten($link-hover-color, 10%);
+  }
 }
 
-a:visited {
-  border-bottom: $grey-2;
-}
 
-a:hover {
-  color: darken( $ci-1, 10% );
-}
-
-a:focus {
-  color: lighten( $ci-1, 20% );
-}
-
-a:active {
-  color: darken( $ci-1, 20% );
-}
 
 
 
@@ -325,34 +323,34 @@ blockquote {
   text-indent: 3.5ch;
 
   &::before {
-  color: desaturate(lighten($ci-3, 25%), 25%);
-  content: '“';
-  font-size: 120px;
-  left: -40px;
-  position: absolute;
-  top: -60px;
+    color: desaturate(lighten($ci-3, 25%), 25%);
+    content: '“';
+    font-size: 120px;
+    left: -40px;
+    position: absolute;
+    top: -60px;
   }
 
   p {
-  color: $body-bg;
-  margin: .15rem;
+    color: $body-bg;
+    margin: .15rem;
   }
 
   a {
-  color: lighten($ci-4, 35%);
+    color: lighten($ci-4, 35%);
   }
 
   cite {
-  padding-top: 5px;
+    padding-top: 5px;
 
-  &::before {
-    content:"\2014 \0020"
-  }
+    &::before {
+      content:"\2014 \0020"
+    }
 
-  a,
-  a:visited {
-    color: $grey-10;
-  }
+    a,
+    a:visited {
+      color: $grey-10;
+    }
   }
 }
 

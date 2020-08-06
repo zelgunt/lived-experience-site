@@ -351,11 +351,8 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
         // Apply the hover link color when it has that class
         &:focus:not(.has-form) > a,
         &:hover:not(.has-form) > a {
-          background-color: $topbar-link-bg-color-hover;
-          @if ($topbar-link-bg-hover) {
-            background: $topbar-link-bg-hover;
-          }
-          color: $topbar-link-color-hover;
+          background-color: $topbar-link-bg-active-hover;
+          color: $topbar-link-color-active-hover;
         }
 
         // Apply the active link color when it has that class
@@ -422,7 +419,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
             }
           }
 
-          &.title h5, &.parent-link {
+          &.title h5 {
             // Back Button
             margin-bottom: 0;
             margin-top: 0;
@@ -515,7 +512,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
               background: $topbar-link-bg;
               &:focus,
               &:hover {
-                background-color: $topbar-link-bg-color-hover;
+                background-color: $topbar-link-bg-active-hover;
                 @if ($topbar-link-bg-hover) {
                   background: $topbar-link-bg-hover;
                 }

@@ -8,7 +8,7 @@ layout: default
 
 		<ul>
 			{% for tag in page.tags %}
-			<li><a href="/topic/{{tag|slugify}}/" title="Posts tagged {{tag}}">{{tag}}</a></li>
+			<li><a href="/{{ site.tag_page_dir }}/{{ tag | slugify }}/" title="Posts tagged {{tag}}">{{tag}}</a></li>
 			{% endfor %}
 		</ul>
 	</div><!-- /.small-12.columns -->

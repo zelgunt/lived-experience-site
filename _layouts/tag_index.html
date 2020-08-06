@@ -13,7 +13,7 @@ layout: default
 			<h3>All Topics</h3>
 			<ul>
 				{% for tag in page.tags %}
-				<li><a href="/{{site.tag_index_dir}}/{{tag}}/" title="Posts tagged {{tag}}" class="{% cycle 'tagcolor1','tagcolor2','tagcolor3','tagcolor4','tagcolor5','tagcolor6','tagcolor7','tagcolor8','tagcolor9','tagcolor10','tagcolor11','tagcolor13','tagcolor13','tagcolor14','tagcolor15','tagcolor16','tagcolor15','tagcolor14','tagcolor13','tagcolor13','tagcolor11','tagcolor10','tagcolor9','tagcolor8','tagcolor7','tagcolor6','tagcolor5','tagcolor4','tagcolor3','tagcolor2' %}">{{tag}}</a></li>
+				<li><a href="/{{site.tag_index_dir}}/{{tag}}/" title="Posts tagged {{tag}}">{{tag}}</a></li>
 				{% endfor %}
 			</ul>
 		</section>

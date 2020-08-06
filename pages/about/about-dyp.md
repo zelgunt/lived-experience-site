@@ -1,5 +1,5 @@
 ---
 layout: page
-title: About Discover Your Power
+title: Discover Your Power
 permalink: /about/dyp/
 ---

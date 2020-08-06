@@ -7,7 +7,7 @@ group :jekyll_plugins do
   gem "jekyll-asciidoc"
   gem 'jekyll-redirect-from'
   gem 'jekyll-paginate'
-  gem 'jekyll-tagging', "~> 1.1.0"
+  # gem 'jekyll-tagging', "~> 1.1.0"
 end
 
 gem 'asciidoctor', '~> 1.5.4'

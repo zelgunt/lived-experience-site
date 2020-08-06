@@ -22,14 +22,6 @@ $ci-4: #990625;
 $ci-5: lighten($ci-1, 50%);
 $ci-6: lighten($ci-4, 60%);
 
-/* Basics
-------------------------------------------------------------------- */
-
-$text-color:       	$ci-1;
-$body-font-color: 	$text-color;
-$body-bg: 			white;
-
-
 /* Foundation Color Variables
 ------------------------------------------------------------------- */
 
@@ -62,6 +54,14 @@ $grey-14: #242424;
 $grey-15: #171717;
 $grey-16: #0B0B0B;
 
+/* Basics
+------------------------------------------------------------------- */
+
+$text-color:       	$ci-1;
+$body-font-color:   $grey-14;
+$body-bg:           $white;
+$link-color:        $ci-4;
+$link-hover-color:  lighten($link-color, 15%);
 
 
 /* Topbar-Navigation

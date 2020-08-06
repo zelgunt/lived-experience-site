@@ -29,22 +29,19 @@
 				<time class="icon-calendar pr20" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"> {{ page.date | date: "%Y-%m-%d" }}</time>
 				{% endif %}
 
-				{% if page.categories != empty %}<span class="icon-archive pr20"> {{ page.categories | join: ' • ' | upcase }}{% endif %}</span>
+				{% if page.categories != empty %}<span class="icon-archive pr20"> {{ page.categories | category_links }}{% endif %}</span>
 				<br />
 				<span class="pr20 tags">{% for tag in page.tags %}<a class="tag p-category" href="/{{ site.tag_page_dir}}/{{tag | slugify}}">{{tag}}</a>{% endfor %}</span>
 			</p>
 
 			{% if page.collection == "posts" %}
 			<div id="post-nav" class="row">
-				{% if page.previous.url %}
-				<div class="small-5 columns"><a class="button small radius prev" href="{{ site.url }}{{ site.baseurl }}{{page.previous.url}}">&laquo; {{site.data.language.previous}}</a></div><!-- /.small-4.columns -->
-				{% endif %}
-				<div class="small-2 columns text-center"><a class="radius button small" href="{{ site.url }}{{ site.baseurl }}/blog/archive/" title="Blog {{ site.data.language.archive }}">{{ site.data.language.archive }}</a></div><!-- /.small-4.columns -->
-				{% if page.next.url %}
-				<div class="small-5 columns text-right"><a class="button small radius next" href="{{ site.url }}{{ site.baseurl }}{{page.next.url}}">{{site.data.language.next}} &raquo;</a></div><!-- /.small-4.columns -->
-				{% else %}
-				<div class="small-5 columns text-right"></div><!-- /.small-4.columns -->
-				{% endif %}
+
+				<div>{% if page.previous.url %}<a href="{{ site.url }}{{ site.baseurl }}{{page.previous.url}}">&laquo;&nbsp;{{site.data.language.previous}}</a>{% endif %}</div>
+
+				<div><a href="{{ site.url }}{{ site.baseurl }}/blog/archive/" title="Blog {{ site.data.language.archive }}">{{ site.data.language.archive }}</a></div>
+
+				<div>{% if page.next.url %}<a href="{{ site.url }}{{ site.baseurl }}{{page.next.url}}">{{site.data.language.next}} &raquo;</a>{% endif %}</div>
 			</div>
 			{% endif %}
 			</div><!--  /.page-meta -->

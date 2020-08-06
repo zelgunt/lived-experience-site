@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About the Lived Experience Project
+title: The Lived Experience Project
 permalink: /about/lex/
 header:
     image_fullwidth: lex-courtroom.jpg

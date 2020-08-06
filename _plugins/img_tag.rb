@@ -60,7 +60,8 @@ module Jekyll
     end
 
     def add_suffix(src, suffix)
-      src.sub(/\.(png|jpe?g|gif)$/, "_#{suffix}.\\1")
+      prefix = suffix =~ /^@/ ? '' : '_'
+      src.sub(/\.(png|jpe?g|gif)$/, "#{prefix}#{suffix}.\\1")
     end
 
     def suffix_exist?(src, suffix)
@@ -72,9 +73,14 @@ module Jekyll
     def render(context)
       if @img && !@img.empty?
         imgurl = context.registers[:site].config['urlimg']
-        @img['src'] = File.join(imgurl, @img['src'])
-        @img['data-original'] = @img['src'].dup
-        @img['data-at2x'] = @img['src'] =~ /@2x\./ ? @img['src'].dup : @img['src'].sub(/\.(png|jpe?g|gif)$/, '@2x.\1')
+        orig = File.join(imgurl, @img['src'])
+        @img['src'] = orig
+        @img['data-original'] = orig
+        if suffix_exist?(orig, '@2x')
+          @img['data-at2x'] = orig =~ /@2x\./ ? orig : add_suffix(orig, '@2x')
+        else
+          @img['data-at2x'] = orig
+        end
 
         if @is_default && context.environments.first['page']['image'].nil?
           ogimg = @img['src'].dup
@@ -95,7 +101,7 @@ module Jekyll
           # <figcaption>#{@img['title']}</figcaption></figure>)
 
           %(<figure class="#{figclass}">
-              <picture>
+              <picture itemprop="image">
                   <source media="(max-width: 640px)" srcset="#{small_img}" />
                   <source srcset="#{@img['data-original']} 1x, #{@img['data-at2x']} 2x" />
                   <img #{@img.collect {|k,v| "#{k}=\"#{v}\"" if v}.join(" ")} />
@@ -104,7 +110,7 @@ module Jekyll
             </figure>)
         else
           @img['title'] = @img['alt']
-          %(<picture>
+          %(<picture itemprop="image">
                 <source
                     media="(max-width: 640px)"
                     srcset="#{small_img}"
@@ -118,8 +124,84 @@ module Jekyll
         %(Error processing input, expected syntax: {% img [class name(s)] [http[s]:/]/path/to/image [width [height]] [alt text | "title text" "alt text"] %})
       end
     end
+    Liquid::Template.register_tag('img', self)
+    Liquid::Template.register_tag('imgd', self)
   end
 end
 
-Liquid::Template.register_tag('img', Jekyll::ImageTag)
-Liquid::Template.register_tag('imgd', Jekyll::ImageTag)
+module ImageFilters
+  def add_suffix(src, suffix)
+    prefix = suffix =~ /^@/ ? '' : '_'
+    src.sub(/\.(png|jpe?g|gif)$/, "#{prefix}#{suffix}.\\1")
+  end
+
+  def suffix_exist?(src, suffix)
+    base = File.join('.', src)
+    File.exist? add_suffix(base, suffix)
+  end
+
+  def picture(image, options = {})
+    config = Jekyll.configuration({})
+    baseurl = File.join(config['url'], config['baseurl'])
+    img_base = config['urlimg']
+
+    @img = {}
+    @img['class'] = options['class'] if options['class']
+    @img['loading'] = 'lazy'
+    @img['width'] = options['width'] if options['width'] && options['width'] > 0
+    @img['height'] = options['height'] if options['height'] && options['height'] > 0
+    @img['title']  = options['title'] if options['title']
+    @img['alt']    = options['alt'] if options['alt']
+    orig = File.join(img_base, image)
+    @img['src'] = File.join(baseurl, orig)
+    @img['data-original'] = File.join(baseurl, orig)
+    if suffix_exist?(orig, '@2x')
+      @img['data-at2x'] = orig =~ /@2x\./ ? File.join(baseurl, orig) : add_suffix(File.join(baseurl, orig), '@2x')
+    else
+      @img['data-at2x'] = File.join(baseurl, orig)
+    end
+
+    small_img = suffix_exist?(orig, 'tw') ? add_suffix(File.join(baseurl, orig), 'tw') : File.join(baseurl, orig)
+
+    if @img.key?('title')
+      figclass = @img['class'].sub(/lazy\s*/, '')
+      @img['class'] = nil
+
+      %(<figure class="#{figclass}">
+          <picture itemprop="image">
+              <source media="(max-width: 640px)" srcset="#{small_img}" />
+              <source srcset="#{@img['data-original']} 1x, #{@img['data-at2x']} 2x" />
+              <img #{@img.collect {|k,v| "#{k}=\"#{v}\"" if v}.join(" ")} />
+          </picture>
+          <figcaption>#{@img['title']}</figcaption>
+        </figure>)
+    else
+      @img['title'] = @img['alt']
+      %(<picture itemprop="image">
+            <source
+                media="(max-width: 640px)"
+                srcset="#{small_img}"
+              />
+            <source srcset="#{@img['data-original']} 1x, #{@img['data-at2x']} 2x" />
+            <img #{@img.collect {|k,v| "#{k}=\"#{v}\"" if v}.join(" ")} />
+        </picture>)
+      # %Q{<img #{@img.collect {|k,v| "#{k}=\"#{v}\"" if v}.join(" ")}>}
+    end
+  end
+
+  def to_img(image, imgclass='', width='', height='', alt='', title='')
+    imgclass ||= ''
+    width ||= 0
+    height ||= 0
+    alt ||= ''
+    title ||= ''
+
+    picture(image, {'class' => imgclass, 'width' => width.to_i, 'height' => height.to_i, 'alt' => alt, 'title' => title })
+  end
+
+  def banner(image)
+    picture(image, {'class' => 'post-banner', 'width' => '970', 'alt' => 'Post banner image'})
+  end
+
+  Liquid::Template.register_filter self
+end

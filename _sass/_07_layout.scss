@@ -63,6 +63,39 @@ body.video cite { color: #fff; }
   display: none;
 }
 
+/* Skip to content
+------------------------------------------------------------------- */
+
+#skiplink {
+  background: $grey-6;
+  border-radius: 4px;
+  box-shadow: none;
+  color: $white;
+  font-size: 16px;
+  margin: 0;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  z-index: 10;
+
+  &:not(:focus) {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
 
 
 /* Masthead
@@ -222,6 +255,13 @@ body.video cite { color: #fff; }
 
   a {
     color: $grey-9;
+    border-bottom: 0;
+
+    &:focus,
+    &:hover {
+      border-bottom: 0;
+      color: $link-hover-color;
+    }
   }
 
   .button {
@@ -229,6 +269,7 @@ body.video cite { color: #fff; }
     border: 0;
     color: #fff;
 
+    &:focus,
     &:hover {
       background: $primary-color;
     }
@@ -488,7 +529,20 @@ body.video cite { color: #fff; }
   }
 }
 
+/* Post navigation
+------------------------------------------------------------------- */
+#post-nav {
+  display: flex;
+  justify-content: space-between;
 
+  div {
+    width: 30%;
+
+    a {
+      width: 100%;
+    }
+  }
+}
 
 /* CSS-Classes to add margin at top or bottom
 ------------------------------------------------------------------- */

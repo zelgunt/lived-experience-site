@@ -115,7 +115,7 @@ button, .button         { letter-spacing: 1px; }
 .side-nav li.title { text-transform: uppercase;}
 .side-nav li { border-top: 1px solid $grey-3;}
 .side-nav li a:not(.button) { border-bottom: 0; padding: 0.4375rem 0rem; }
-.side-nav li a:not(.button):hover, .side-nav li a:not(.button):focus { background: $grey-1; }
+.side-nav li a:not(.button):hover, .side-nav li a:not(.button):focus { color: $ci-1; }
 
 .homepage p { margin: 0; padding: 0; color: $grey-10; }
 
@@ -179,5 +179,132 @@ img.lazy {
         height: auto;
       }
     }
+  }
+}
+
+/* ------------------- *
+ * Homepage blog posts *
+ * ------------------- */
+
+.homepage__post-hero {
+  display: flex;
+  flex-direction: row;
+}
+
+.homepage__post-hero-thumbnail {
+    width: 300px;
+    height: 100%;
+    display: block;
+    margin-right: 1em;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.homepage__post-hero-subhed {
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+.homepage__post-hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.container-secondary {
+  background: $footer-bg;
+  color: $white;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $white;
+  }
+
+  a {
+    color: lighten($secondary-color, 50%);
+  }
+
+  .homepage__post-hero-subhed {
+   color: lighten($secondary-color, 30%);
+  }
+
+  &.category-posts {
+    padding: .5ch 1ch;
+    border-radius: 10px;
+  }
+}
+
+/* ------------- *
+ * Video embeds  *
+ * ------------- */
+
+.bt-video-container {
+  clear: both;
+  display: block;
+  margin-bottom: 3.5em;
+  position: relative;
+
+  a {
+    background: $grey-8;
+    background-size: cover !important;
+    bottom: 0;
+    color: $grey-10;
+    display: block;
+    left: 0;
+    padding-top: 25%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    top: 0;
+
+    &:hover {
+      color: #FFF;
+      text-decoration: none;
+    }
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+  }
+
+  iframe,
+  object,
+  embed,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.bt-video-container-div {
+  background: url(/assets/img/youtube-play-button.png) center center no-repeat;
+  height: 100%;
+  left: 0;
+  opacity: .85;
+  position: absolute;
+  top: 0;
+  transition: opacity .2s ease-in-out;
+  width: 100%;
+
+  &:hover {
+    opacity: 1;
   }
 }

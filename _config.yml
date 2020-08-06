@@ -20,13 +20,17 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-redirect-from
-  - jekyll/tagging
+  # - jekyll/tagging
 
 tag_page_layout: tag_page
 tag_page_dir: topic
 tag_permalink_style: pretty
+tag_title_prefix: "Posts Tagged &ldquo;"
+tag_title_suffix: "&rdquo;"
 author_dir: contributors
 author_title_prefix: "Contributor: "
+category_dir: "/category"
+category_title_prefix: ''
 
 audio_base_path: /media/audio
 video_base_path: /media/video
@@ -52,8 +56,8 @@ paginate_path: "blog/page:num"   # Pagination path › Important for blog page i
 
 # Theme works best with Kramdown (using the table of contents function)
 markdown           : kramdown
-# permalink          : /:year/:month/:day/:title/
-permalink          : /:categories/:title/
+permalink          : /:year/:month/:day/:title/
+# permalink          : /:categories/:title/
 highlight          : rouge
 excerpt_separator  : "<!--more-->"
 include            : ['.htaccess']

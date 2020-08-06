@@ -3,9 +3,16 @@ require 'fileutils'
 require 'json'
 require 'kramdown'
 
+class String
+  def slug
+    self.gsub(/ +/, '-').downcase
+  end
+end
+
 module LEXLiquidFilters
-  base_url = "http://lex.invalid/"
-  cdn_url = "http://lex.invalid/"
+  config = Jekyll.configuration({})
+  base_url = File.join(config['url'], config['baseurl'])
+  cdn_url = base_url
 
   def fixer(input)
     input.force_encoding('utf-8')
@@ -194,6 +201,14 @@ module LEXLiquidFilters
     input
   end
 
+  # Replaces relative urls with full urls
+  def expand_urls(input, url='')
+    url ||= '/'
+    input.gsub(/(\s+(href|src)\s*=\s*["|']{1})(\/[^\"'>]*)/) do
+      $1+url+$3
+    end
+  end
+
   def expand_url_cdn(input)
     input.strip!
     unless input =~ /^http/
@@ -333,29 +348,6 @@ module LEXLiquidFilters
     end
   end
 
-  # Outputs a list of categories as comma-separated <a> links. This is used
-  # to output the category list for each post on a category page.
-  #
-  #  +categories+ is the list of categories to format.
-  #
-  # Returns string
-  #
-  def category_links(categories)
-    dir = @context.registers[:site].config['category_dir']
-    categories = categories.sort!.map do |item|
-      "<a class='category' href='/#{dir}/#{item.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase}/'>#{item}</a>"
-    end
-
-    case categories.length
-    when 0
-      ""
-    when 1
-      categories[0].to_s
-    else
-      "#{categories[0...-1].join(', ')}, #{categories[-1]}"
-    end
-  end
-
   def tag_links(tags)
     dir = @context.registers[:site].config['tag_index_dir']
     tags = tags.sort!.map do |item|
@@ -432,3 +424,18 @@ module LEXLiquidFilters
 end
 
 
+# Bad monkey
+# module Jekyll
+#   module Filters
+#     module URLFilters
+#       # Produces an absolute URL based on site.url and site.baseurl.
+#       #
+#       # input - the URL to make absolute.
+#       #
+#       # Returns the absolute URL as a String.
+#       def absolute_url(input)
+#         return input
+#       end
+#     end
+#   end
+# end

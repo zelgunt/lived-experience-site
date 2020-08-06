@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About TerraLuna
+title: TerraLuna
 permalink: /about/terraluna/
 breadcrumb: true
 header:

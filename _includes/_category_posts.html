@@ -1,0 +1,12 @@
+<div class="category-posts container-secondary">
+	{% capture primary_cat %}{{ page.categories | primary_category }}{% endcapture %}
+	<h5>More like this...</h5>
+	<ul>
+		{% for post in site.categories[primary_cat] limit:5 offset:0 %}
+		{% unless post.url == page.url %}
+	    <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"><strong>{{ post.title }}</strong></a></li>
+	    {% endunless %}
+	    {% endfor %}
+	    <li><a href="{{ site.url }}{{ site.baseurl }}/category/{{ primary_cat | slugify }}"><strong>{{ site.data.language.more }}</strong></a></li>
+	</ul>
+</div>
