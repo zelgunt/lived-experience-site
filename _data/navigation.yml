@@ -6,14 +6,14 @@
   url: "/about/"
   side: left
   dropdown:
-  - title: "About TerraLuna"
-    url: "/about/terraluna"
-  - title: "About Lived Experience Project"
+  - title: "Lived Experience Project"
     url: "/about/lex"
-  - title: "Guiding Principles"
+  - title: "Our Guiding Principles"
     url: "/about/principles"
-  - title: "About Discover Your Power"
+  - title: "Discovering Your Power"
     url: "/about/dyp"
+  - title: "TerraLuna Collaborative"
+    url: "/about/terraluna"
 
 - title: "Resources"
   url: "/resources/"
@@ -23,7 +23,7 @@
     url: "/resources/consent/"
   - title: '"I" statements'
     url: "/resources/i-statements/"
-  - title: "DYP Resources"
+  - title: "DYPDicovering Your Power Resources"
     url: "/resources/consent/"
 
 - title: "Contributors"

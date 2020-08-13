@@ -11,11 +11,11 @@ jeff:
   # Usually Contributor
   siterole: Contributor
   # URI, email, and Twitter can be left blank
-  uri: https://forestofthings.com/
-  email:
+  uri: 
+  email: jeff@terralunacollaborative.com
   twitter: "jsguntzel"
   # Summary should be a single line summary of the bio
-  summary: Jeff Severns Guntzel focused on investigative and data-driven projects, as well as engaging readers for other reporting efforts, as idea generators, sources and content contributors.
+  summary: Jeff Severns Guntzel is lead researcher for the Lived Experience Project.
   # Use |+ for multiple lines with line breaks
   # Markdown allowed, use an empty line to break paragraphs
   bio: |+
@@ -26,34 +26,52 @@ dominique-morgan:
   name: "Dominique Morgan"
   slug: dominique-morgan
   siterole: Contributor
-  uri:
-  email:
+  uri: https://www.dominiquemorgan.com
+  email: dominiqu@terralunacollaborative.com
   twitter:
+  summary: Dominique Morgan is lead facilitator for the Lived Experience Project.
+  bio: |+
+      Dominique Morgan is a Young Black and Influential Award recipient for Advocacy, Greater Omaha Young Professionals' Change Maker Award recipient and NAACP Freedom Fighter Award recipient. She is the Founder and Executive Director of Queer People of Color Nebraska, National Director of Black and Pink - the nation’s largest prison abolitionist organization in the country and an award winning musician - 2018 Omaha Entertainment Arts Award winner for Best R&B and chosen as the first to perform on the TEDX stage with her song "Stand Up".
 racquel-henderson:
   name: "Racquel Henderson"
   slug: racquel-henderson
   siterole: Contributor
   uri:
-  email:
+  email: racquel@terralunacollaborative.com
   twitter:
+  summary: Racquel Henderson is facilitator and lead interviewer for the Lived Experience Project.
+  bio: |+
+      Racquel Henderson was born and raised in North Omaha, a proud mother of two, a mentor to many, and a strong advocate for personal, career, and educational growth and development.
+      
+      Racquel is a Young Black and Influential Aware recipient, a MORE Women Award Recipient, and Founder of #TheBeProject—a movement based on bringing awareness to various jobs and resources to community members. Racquel earned a Bachelor's of Science from University of Nebraska at Omaha, where she studied Criminal Justice and Psychology and was inducted into the National Honors Society of Criminal Justice. Racquel has spent over eight years in serving her community by providing second chances in re-entry programs and uplifting youth in higher education opportunities. Racquel currently, serves as a College Success Navigator at Metropolitan Community College, where she works with a scholarship program that focuses on the retention of first-generation and underrepresented students by providing intrusive academic support and guidance with the nonprofit organization, Avenue Scholars. Racquel also serves as the Operations Ambassador for Black and Pink—the nation's largest prison abolitionist organization.
+      
+      Racquel believes that with the right resources, opportunities, and support, change is inevitable.
+  photo: contributors/rhenderson.jpg
+
 andrew-aleman:
   name: "Andrew Aleman"
   slug: andrew-aleman
   siterole: Contributor
   uri:
-  email:
+  email: andrew@terralunacollaborative.com
   twitter:
+  summary: Andrew Aleman is a facilitator for the Lived Experience Project.
+  bio:
 keith-miller:
   name: "Keith Miller"
   slug: keith-miller
   siterole: Contributor
   uri:
-  email:
+  email: keith@terralunacollaborative.com
   twitter:
+  summary: Keith Miller is project manager for the Lived Experience Project.
+  bio: |+
+      Keith Miller is a co-founder and serves on the board of TerraLuna. Keith has a Ph.D. in Evaluation Studies and a Master of Public Policy, both from the University of Minnesota. He lives in Minneapolis, MN with his spouse, children, and friendly dog, Elsie. Keith primarily works with philanthropic organizations pursuing systems change and equity-focused work. Keith’s evaluation leadership work cuts across disciplines and systems, including sustainable agriculture, juvenile justice, and education. Through TerraLuna, Keith facilitates developmental evaluation, leads evaluation capacity building, and helps clients build theories of change and philanthropy. Keith is passionate about building equitable teams, ensuring people with less power have voice in system change efforts and decisions that affect them. Before becoming a developmental evaluator, Keith lived and worked in Uganda and Thailand.
+  photo: contributors/kmiller.jpg
 doualy-xaykaothao:
   name: "Doualy Xaykaothao"
   slug: doualy-xaykaothao
   siterole: Contributor
   uri:
-  email:
+  email: doualy@terralunacollaborative.com
   twitter:

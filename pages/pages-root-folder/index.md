@@ -12,18 +12,19 @@ header:
 widget1:
   title: "What we do"
   url: '/about/'
-  image: lex-courtroom-thumb.jpg
-  text: Here's a description of this widget. This one will be a quick overview of the various projects and a link to the about pages.
+  image: cant-use-thumb.jpg
+  text: The Lived Experience Project is a juvenile justice research project that centers the lived experiences of system impacted youth and their families. Our facilitation provides a unique opportunity to reflect, review, and reassess how we work with and support youth who are impacted by various systems, as well as how we support their families. Our facilitations are crafted utilizing actual data provided by system impacted youth, adults who were system impacted as youth, as well as their families.
 widget2:
   title: "Our principles"
   url: '/about/principles'
-  image: lex-healing-thumb.jpg
-  text: At this point I feel like I'm just faking it. I have no idea what these three widgets should feature, or whether I actually need three. It's an arbitrary number.
+  image: lex-community-thumb.jpg
+  text: We create space for anyone who has been impact by the juvenile justice system. We honor the inherent goodness in all individuals, despite the harm they may be responsible for. Our work recognizes and draws upon the ever-growing body of scientific knowledge about the behaviors and capacities of children and adolescents. Our work seeks to reduce the harm and trauma that children, youth, and families experience within the juvenile justice system and at its edges.
 widget3:
   title: "Learn more"
   url: '/resources/'
-  image: lex-shadows-thumb.jpg
-  text: Again, these are just placeholders. I'm repeating myself now. And I'm still unsure we need three, if we need any at all. I need more content.
+  image: lex-courtroom-thumb.jpg
+  text: Learn more about our facilitated sessions with youth, families, and people working every day in the juvenile justice system; sign up for one of those sessions or for our mailing list; learn about our interviews with youth and familes; and read what's new on our blog. The Lived Experience Project is an Omaha-based project that focuses on the Douglas County juvenile justice system and the state-level policies and practices impacting Douglas County youth.
+
 
 # callforaction:
 #   url: /newsletter/

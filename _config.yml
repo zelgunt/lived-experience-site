@@ -127,7 +127,7 @@ defaults:
       comments: false
       author: jeff     # Default author for posts
       header:
-        image_fullwidth: lex-healing.jpg
+        image_fullwidth: lex-courtroom.jpg
         caption: Artwork by Odera Igbokwe
         caption_url: https://www.odera.net/
 
