@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page-fullwidth
 title:  "Welcome to the Lived Experience Project"
 subheadline: Subhed
 date:   2020-07-16 08:48

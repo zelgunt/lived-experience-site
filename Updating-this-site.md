@@ -1,4 +1,22 @@
-## Configutation
+---
+layout: page
+title: Updating LEX
+permalink: /documentation/
+breadcrumb: true
+header: false
+gallery:
+    - image_url: lex-courtroom.jpg
+      caption: Gallery example 1
+    - image_url: lex-healing.jpg
+      caption: Gallery example 2
+    - image_url: lex-shadows.jpg
+      caption: Gallery example 3
+---
+{: #toc }
+*  TOC
+{:toc}
+
+## Configuration
 
 ### Main menu navigation
 
@@ -94,20 +112,29 @@ To include a table of contents, include the following code in a post or page:
 
 ### Include a gallery. 
 
-See the frontmatter of this post for a demo, then include `{% include gallery %}` in the post.
+See the frontmatter of this post for a demo, then include `{% raw %}{% include gallery %}{% endraw %}` in the post.
+
+{% include gallery %}
 
 ### Audio player
 
-To include an audio file use `{% audio audio_file_name %}` in the post/page. If an extension is specified, only that format will be linked. Otherwise it's assumed that you have multiple formats from mp3, wav, ogg, and oga available and any that exist in media/audio with the same base filename will be included in the tag's sources.
+To include an audio file use `{% raw %}{% audio audio_file_name %}{% endraw %}` in the post/page. If an extension is specified, only that format will be linked. Otherwise it's assumed that you have multiple formats from mp3, wav, ogg, and oga available and any that exist in media/audio with the same base filename will be included in the tag's sources.
 
-For example, if the tag is `{% audio sys078 %}` and the `/media/audio/` directory contains `sys078.mp3` and `sys078.ogg`, then an HTML5 audio tag with sources for both formats will be created.
+For example, if the tag is `{% raw %}{% audio sys078 %}{% endraw %}` and the `/media/audio/` directory contains `sys078.mp3` and `sys078.ogg`, then an HTML5 audio tag with sources for both formats will be created.
 
-Using subdirectories is fine, in which case the tag would look like `{% audio subdir/file %}`.
+Using subdirectories is fine, in which case the tag would look like `{% raw %}{% audio subdir/file %}{% endraw %}`.
 
 Add a title after the filename, and optionally include `download=true` to include a download link.
 
+This:
 
+{% raw %}
     {% audio sys078 Systematic Episode 78 download=true %}
+{% endraw %}
+
+Generates this:
+
+{% audio sys078 Systematic Episode 78 download=true %}
 
 ### Images
 
@@ -122,37 +149,49 @@ Having an image for the post defined makes display of the post in archive lists 
 
 #### Including images within the post
 
-The easiest way to include an image in the post with all appropriate markup is to use the `{% img %}` tag. This takes a series of arguments, the simplest version being:
+The easiest way to include an image in the post with all appropriate markup is to use the `{% raw %}{% img %}{% endraw %}` tag. This takes a series of arguments, the simplest version being:
 
-  {% img path/to/image.jpg %}
+{% raw %}
+    {% img path/to/image.jpg %}
+{% endraw %}
 
-Images are expected to be in the `/images/` directory, and can use relative paths to subdirectories from there. E.g. if you have an image in `/images/2020/07/myimage.png`, you can reference it with `{% img 2020/07/myimage.png %}`
+Images are expected to be in the `/images/` directory, and can use relative paths to subdirectories from there. E.g. if you have an image in `/images/2020/07/myimage.png`, you can reference it with `{% raw %}{% img 2020/07/myimage.png %}{% endraw %}`
 
 You can apply CSS classes to the image by preceding the filename with one or more class names:
 
-  {% img alignleft path/to/image.jpg %}
+{% raw %}
+    {% img alignleft path/to/image.jpg %}
+{% endraw %}
 
 You can also specify a width and height after the image, which can help with lazy loading and page layout. This should be the natural size of the main (non-2x) image:
 
-  {% img path/to/image.jpg 800 600 %}
+{% raw %}
+    {% img path/to/image.jpg 800 600 %}
+{% endraw %}
 
 Alt text should always be included, and comes after any width or height:
 
-  {% img path/to/image.jpg 800 600 Alt Text for image %}
+{% raw %}
+    {% img path/to/image.jpg 800 600 Alt Text for image %}
+{% endraw %}
 
 If you want a title as well (which creates a caption on the image), use two strings in quotes. The first one will become the title, the second the alt tag:
 
-  {% img path/to/image.jpg "This is the title" "image alt text" %}
+{% raw %}
+    {% img path/to/image.jpg "This is the title" "image alt text" %}
+{% endraw %}
 
 A full tag would look like this:
 
-  {% img alignleft path/to/image.jpg 800 600 "The image title" "The Alt Text" %}
+{% raw %}
+    {% img alignleft path/to/image.jpg 800 600 "The image title" "The Alt Text" %}
+{% endraw %}
 
-Use `{% imgd image... %}` to define an image as the default image for the page, affecting social sharing. Otherwise `image:` in frontmatter is default.
+Use `{% raw %}{% imgd image... %}{% endraw %}` to define an image as the default image for the page, affecting social sharing. Otherwise `image:` in frontmatter is default.
 
 #### A note on image sizes
 
-Multiple sizes of an image can (and often should) be provided when using the `{% img %}` tag. Preferably, a regular size image and a 2x size would be included, named with the same base: `myimage.png` and `myimage@2x.png`.
+Multiple sizes of an image can (and often should) be provided when using the `{% raw %}{% img %}{% endraw %}` tag. Preferably, a regular size image and a 2x size would be included, named with the same base: `myimage.png` and `myimage@2x.png`.
 
 The base size for a 1x post banner image should be 970px wide, with an @2x version at 1940px.
 
@@ -184,8 +223,10 @@ It will insert a footnote like this[^fn1].
 
 You can embed videos from YouTube and Vimeo with simple tags:
 
+{% raw %}
     {% youtube VIDEO_ID %}
     {% vimeo VIDEO_ID %}
+{% endraw %}
 
 Grab the video ID from the url:
 
@@ -200,7 +241,9 @@ You can specify a width and height if the video is not a standard 16:9 format. G
 
 Add those to the tag:
 
+{% raw %}
     {% youtube NwJl5w-h6Nc 560 315 %}
+{% endraw %}
 
 For Vimeo, basically the same process:
 
@@ -208,14 +251,21 @@ For Vimeo, basically the same process:
 
 And added to the tag:
 
+{% raw %}
     {% vimeo 47494666 640 360 %}
+{% endraw %}
 
 You can also provide a caption for a video by appending it to the end of the tag (regardless of whether dimensions are specified or not).
 
+{% raw %}
     {% vimeo 47494666 "Decolonization Means Prison Abolition" %}
+{% endraw %}
 
+The above embeds this (resize the width of your viewport to see that it's fluid in size):
+
+{% vimeo 47494666 "Decolonization Means Prison Abolition" %}
 
 ### Post terminator
 
-To include a terminator at the end of the last paragraph, use `...end of post.{% eof %}`. If you don't leave a space between the last character and the tag, it will ensure that the last word breaks to a new line and doesn't leave the terminator hanging. This is recommended.
+To include a terminator at the end of the last paragraph, use `...end of post.{% raw %}{% eof %}{% endraw %}`. If you don't leave a space between the last character and the tag, it will ensure that the last word breaks to a new line and doesn't leave the terminator hanging. This is recommended.{% eof %}
 
