@@ -15,7 +15,7 @@ config = {
   # Where to store the database
   db_location: File.expand_path('./webexcursions'),
   # How many posts must be gathered before publishing
-  min_count: 3,
+  min_count: 2,
   # relative location of folder for creating drafts
   drafts_folder: File.expand_path('_drafts')
 }
