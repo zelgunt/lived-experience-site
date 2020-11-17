@@ -114,3 +114,5 @@ See `updating-this-site` for details.
 ### Terminator
 
 To include a terminator at the end of the last paragraph, use {% raw %}`{% eof %}`{% endraw %}.{% eof %}
+
+{% eof %}
