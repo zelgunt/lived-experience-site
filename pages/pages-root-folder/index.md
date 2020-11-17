@@ -7,7 +7,7 @@
 layout: frontpage
 header:
   image_fullwidth: lex-02.jpg
-  caption: Artwork by Odera Igbokwe
+  caption: Artwork by TK
   caption_url: https://www.odera.net/
 widget1:
   title: "What we do"

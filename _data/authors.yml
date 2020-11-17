@@ -21,7 +21,7 @@ jeff:
   bio: |+
       Jeff Severns Guntzel does journalism for the web, on paper, and occasionally for the radio. He has been known to do journalism from the command line and in comic books.
       He has worked for really great people at American Public Media, MinnPost, Utne Reader, National Catholic Reporter and Punk Planet magazine. Now he is living the freelance life and loving it very much. Before turning to journalism, Jeff spent years doing humanitarian work in pre-war Iraq. Electronic Iraq, a website he co-founded in 2003 to document the Iraqi experience of war, is archived in the Library of Congress and the British Library. That is a good thing because libraries are great and those libraries are amazing!
-  photo: contributors/jsguntzel.jpg
+  photo:
 dominique-morgan:
   name: "Dominique Morgan"
   slug: dominique-morgan
@@ -32,6 +32,7 @@ dominique-morgan:
   summary: Dominique Morgan is lead facilitator for the Lived Experience Project.
   bio: |+
       Dominique Morgan is a Young Black and Influential Award recipient for Advocacy, Greater Omaha Young Professionals' Change Maker Award recipient and NAACP Freedom Fighter Award recipient. She is the Founder and Executive Director of Queer People of Color Nebraska, National Director of Black and Pink - the nation’s largest prison abolitionist organization in the country and an award winning musician - 2018 Omaha Entertainment Arts Award winner for Best R&B and chosen as the first to perform on the TEDX stage with her song "Stand Up".
+  photo:
 racquel-henderson:
   name: "Racquel Henderson"
   slug: racquel-henderson
@@ -46,7 +47,7 @@ racquel-henderson:
       Racquel is a Young Black and Influential Aware recipient, a MORE Women Award Recipient, and Founder of #TheBeProject—a movement based on bringing awareness to various jobs and resources to community members. Racquel earned a Bachelor's of Science from University of Nebraska at Omaha, where she studied Criminal Justice and Psychology and was inducted into the National Honors Society of Criminal Justice. Racquel has spent over eight years in serving her community by providing second chances in re-entry programs and uplifting youth in higher education opportunities. Racquel currently, serves as a College Success Navigator at Metropolitan Community College, where she works with a scholarship program that focuses on the retention of first-generation and underrepresented students by providing intrusive academic support and guidance with the nonprofit organization, Avenue Scholars. Racquel also serves as the Operations Ambassador for Black and Pink—the nation's largest prison abolitionist organization.
       
       Racquel believes that with the right resources, opportunities, and support, change is inevitable.
-  photo: contributors/rhenderson.jpg
+  photo:
 
 andrew-aleman:
   name: "Andrew Aleman"
@@ -57,6 +58,7 @@ andrew-aleman:
   twitter:
   summary: Andrew Aleman is a facilitator for the Lived Experience Project.
   bio:
+  photo:
 keith-miller:
   name: "Keith Miller"
   slug: keith-miller
@@ -67,7 +69,7 @@ keith-miller:
   summary: Keith Miller is project manager for the Lived Experience Project.
   bio: |+
       Keith Miller is a co-founder and serves on the board of TerraLuna. Keith has a Ph.D. in Evaluation Studies and a Master of Public Policy, both from the University of Minnesota. He lives in Minneapolis, MN with his spouse, children, and friendly dog, Elsie. Keith primarily works with philanthropic organizations pursuing systems change and equity-focused work. Keith’s evaluation leadership work cuts across disciplines and systems, including sustainable agriculture, juvenile justice, and education. Through TerraLuna, Keith facilitates developmental evaluation, leads evaluation capacity building, and helps clients build theories of change and philanthropy. Keith is passionate about building equitable teams, ensuring people with less power have voice in system change efforts and decisions that affect them. Before becoming a developmental evaluator, Keith lived and worked in Uganda and Thailand.
-  photo: contributors/kmiller.jpg
+  photo:
 doualy-xaykaothao:
   name: "Doualy Xaykaothao"
   slug: doualy-xaykaothao
@@ -75,3 +77,4 @@ doualy-xaykaothao:
   uri:
   email: doualy@terralunacollaborative.com
   twitter:
+  photo:
