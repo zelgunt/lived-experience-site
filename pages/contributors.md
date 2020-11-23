@@ -5,7 +5,7 @@ permalink: /contributors/
 breadcrumb: true
 header:
   image_fullwidth: lex-community.jpg
-  caption: Artwork by Odera Igbokwe
+  caption: Artwork by TK
   caption_url: https://www.odera.net/
 ---
 <ul id="author-list">

@@ -67,7 +67,7 @@ Content of the sidebar is edited in `_includes/sidebar.html`. It's static using 
         
             header:
                 image_fullwidth: lex-shadows.jpg
-                caption: Artwork by Odera Igbokwe
+                caption: Artwork by TK
                 caption_url: https://www.odera.net/
     - `image:` can define an article image that appears before the headline. Must exist in `/images/`
     

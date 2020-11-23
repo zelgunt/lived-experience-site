@@ -100,7 +100,7 @@ defaults:
       author: jeff     # Default author for pages
       header:
         image_fullwidth: lex-courtroom.jpg
-        caption: Artwork by Odera Igbokwe
+        caption: Artwork by TK
         caption_url: https://www.odera.net/
   -
     scope:
@@ -114,7 +114,7 @@ defaults:
       author: jeff     # Default author for pages
       header:
         image_fullwidth: lex-healing.jpg
-        caption: Artwork by Odera Igbokwe
+        caption: Artwork by TK
         caption_url: https://www.odera.net/
   -
     scope:
@@ -128,7 +128,7 @@ defaults:
       author: jeff     # Default author for posts
       header:
         image_fullwidth: lex-courtroom.jpg
-        caption: Artwork by Odera Igbokwe
+        caption: Artwork by TK
         caption_url: https://www.odera.net/
 
 google_author:             'https://plus.google.com/u/0/xxxxx'

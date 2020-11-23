@@ -7,7 +7,7 @@ meta_teaser: "Description used for meta tags. Short, no HTML."
 teaser: "Lead in text for summary pages. HTML OK."
 header:
   image_fullwidth: lex-shadows.jpg
-  caption: Artwork by Odera Igbokwe
+  caption: Artwork by TK
   caption_url: https://www.odera.net/
 thumbnail: lex-shadows-thumb.jpg
 categories: [Blog]
@@ -63,7 +63,7 @@ Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit number
     
         header:
             image_fullwidth: lex-shadows.jpg
-            caption: Artwork by Odera Igbokwe
+            caption: Artwork by TK
             caption_url: https://www.odera.net/
 - `image:` can define an article image that appears before the headline. Must exist in `/images/`
 
@@ -114,3 +114,5 @@ See `updating-this-site` for details.
 ### Terminator
 
 To include a terminator at the end of the last paragraph, use {% raw %}`{% eof %}`{% endraw %}.{% eof %}
+
+{% eof %}
