@@ -73,6 +73,7 @@ exclude:
   - INSTALL.md
   - vendor
   - '*.yml'
+  - '.DS_Store'
 
 # The language setting is used in /includes/header.html for html-settings
 language: 'en'
@@ -137,7 +138,7 @@ bing_webmastertools_id:    'xxxxx'
 # yandex_site_verification:  ''
 # alexa_verify_id:           ''
 
-og_image:                           'http://images.phlow.de/phlow/phlow_de-logo-512x.png'
+og_image:                           ''
 og_locale:                          'en_EN'
 og_type:                            'website'
 
