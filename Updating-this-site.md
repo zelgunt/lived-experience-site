@@ -237,7 +237,7 @@ The videos will be embedded with a poster image and require a click to load. Ads
 
 You can specify a width and height if the video is not a standard 16:9 format. Getting the dimensions right will help with scaling and presentation. The default values are 640 x 360. To get the natural size for a YouTube video, visit it in your browser and click on Share -> Embed. In the first line of the code that displays you'll see the width and height.
 
-![](http://assets.brettterpstra.com/dimensions-from-share.gif)
+![YouTube Video Dimensions](http://assets.brettterpstra.com/dimensions-from-share.gif)
 
 Add those to the tag:
 
@@ -247,7 +247,7 @@ Add those to the tag:
 
 For Vimeo, basically the same process:
 
-![](http://assets.brettterpstra.com/2020-08-06%2011.38.08.gif)
+![Vimeo Video Dimensions](http://assets.brettterpstra.com/2020-08-06%2011.38.08.gif)
 
 And added to the tag:
 
@@ -269,3 +269,18 @@ The above embeds this (resize the width of your viewport to see that it's fluid 
 
 To include a terminator at the end of the last paragraph, use `...end of post.{% raw %}{% eof %}{% endraw %}`. If you don't leave a space between the last character and the tag, it will ensure that the last word breaks to a new line and doesn't leave the terminator hanging. This is recommended.{% eof %}
 
+### DocumentCloud
+
+Embed a DocumentCloud document or annotation using the `{% raw %}{% dc URL %}{% endraw %}` tag. The tag takes a URL pointing to either the document or a specific annotation. The easiest way to retrieve these URLs is to open the document in DocumentCloud and use the "Share" link in the sidebar. Choose the type of item to share, either "Share entire document," "Share specific page," or "Share specific note." Then select "Link" and copy the resulting URL.
+
+Example (annotation):
+
+{% raw %}
+    {% dc https://beta.documentcloud.org/documents/20413901-screen-shot-2020-11-21-at-102719-am#document/p1/a2005512 %}
+{% endraw %}
+
+{% dc https://beta.documentcloud.org/documents/20413901-screen-shot-2020-11-21-at-102719-am#document/p1/a2005512 %}
+
+Copying a DocumentCloud embed url:
+
+![DocumentCloud Embed](http://assets.brettterpstra.com/documentcloudembed.gif "Copying a DocumentCloud embed URL")
