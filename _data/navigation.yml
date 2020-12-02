@@ -2,33 +2,56 @@
   url: "/"
   side: left
 
-- title: About
-  url: "/about/"
+- title: Participate
+  url: ""
   side: left
   dropdown:
-  - title: "Lived Experience Project"
-    url: "/about/lex"
-  - title: "Our Guiding Principles"
-    url: "/about/principles"
   - title: "Discovering Your Power"
-    url: "/about/dyp"
-  - title: "TerraLuna Collaborative"
-    url: "/about/terraluna"
+    url: ""
+  - title: "Interviews"
+    url: ""
+  - title: "System Facilitation"
 
-- title: "Resources"
-  url: "/resources/"
+- title: Download
+  url: ""
   side: left
   dropdown:
-  - title: "Illustrated Consent"
-    url: "/resources/consent/"
-  - title: '"I" statements'
-    url: "/resources/i-statements/"
-  - title: "Discovering Your Power Resources"
-    url: "/resources/consent/"
+  - title: "Discovering Your Power Forms"
+    url: ""
+  - title: "Interview Forms"
+    url: ""
+  - title: "System Facilitation Forms"
+    url: ""
 
-- title: "Contributors"
-  url: "/contributors/"
+- title: Meet the Team
+  url: ""
   side: left
+  dropdown:
+  - title: "Andrew Aleman"
+    url: ""
+  - title: "Racquel Henderson"
+    url: ""
+  - title: "Keith Miller"
+    url: ""  
+  - title: "Dominique Morgan"
+    url: ""
+  - title: "Jeff Severns Guntzel"
+    url: ""
+  - title: "Doualy Xaykaothao"
+    url: ""  
+
+- title: How We Work
+  url: "/blog/"
+  side: left
+  dropdown:
+  - title: "Facilitation Approach"
+    url: ""
+  - title: "Interview Methodology"
+    url: ""
+  - title: "Investigative Research"
+    url: ""
+  - title: Sharing Out
+    url: ""
 
 - title: Blog
   url: "/blog/"
@@ -38,6 +61,17 @@
     url: "/blog/archive/"
   - title: "Topics"
     url: "/topic/"
+
+# - title: "Downloads"
+#  url: "/resources/"
+#  side: left
+#  dropdown:
+#  - title: "Illustrated Consent"
+#    url: "/resources/consent/"
+#  - title: '"I" statements'
+#    url: "/resources/i-statements/"
+#  - title: "Discovering Your Power Resources"
+#    url: "/resources/consent/"
 
 - title: "Search"
   url: "/search/"
