@@ -28,17 +28,17 @@
   side: left
   dropdown:
   - title: "Andrew Aleman"
-    url: ""
+    url: "/contributors/andrew-aleman"
   - title: "Racquel Henderson"
-    url: ""
+    url: "/contributors/racquel-henderson"
   - title: "Keith Miller"
-    url: ""  
+    url: "/contributors/keith-miller"  
   - title: "Dominique Morgan"
-    url: ""
+    url: "/contributors/dominique-morgan"
   - title: "Jeff Severns Guntzel"
-    url: ""
+    url: "/contributors/jeff-severns-guntzel"
   - title: "Doualy Xaykaothao"
-    url: ""  
+    url: "/contributors/doualy-xaykaothao"  
 
 - title: How We Work
   url: "/blog/"

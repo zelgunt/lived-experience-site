@@ -5,11 +5,11 @@ permalink: /documentation/
 breadcrumb: true
 header: false
 gallery:
-    - image_url: lex-courtroom.jpg
+    - image_url: lex-community.jpg
       caption: Gallery example 1
-    - image_url: lex-healing.jpg
+    - image_url: lex-community.jpg
       caption: Gallery example 2
-    - image_url: lex-shadows.jpg
+    - image_url: lex-community.jpg
       caption: Gallery example 3
 ---
 {: #toc }

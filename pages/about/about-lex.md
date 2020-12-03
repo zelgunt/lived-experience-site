@@ -3,8 +3,8 @@ layout: page
 title: The Lived Experience Project
 permalink: /about/lex/
 header:
-    image_fullwidth: lex-courtroom.jpg
-    caption: Artwork by TK
+    image_fullwidth: lex-community.jpg
+    caption: Artwork by Odera Igbokwe
     caption_url: https://www.odera.net/
 breadcrumb: true
 ---

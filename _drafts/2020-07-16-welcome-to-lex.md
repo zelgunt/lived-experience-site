@@ -14,11 +14,11 @@ categories: [Blog]
 tags: [test tag, another tag]
 author: jeff
 gallery:
-    - image_url: lex-courtroom.jpg
+    - image_url: lex-community.jpg
       caption: Gallery example 1
-    - image_url: lex-healing.jpg
+    - image_url: lex-community.jpg
       caption: Gallery example 2
-    - image_url: lex-shadows.jpg
+    - image_url: lex-community.jpg
       caption: Gallery example 3
 ---
 You'll find this post in your `_posts` directory. Edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
