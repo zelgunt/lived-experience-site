@@ -13,3 +13,5 @@ branches:
   only:
   - production
   - staging
+notifications:
+  slack: lex-ejq6598:N0ngYpAdDtLZfPqzgsA1JNLc
