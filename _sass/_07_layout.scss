@@ -12,6 +12,7 @@
 - Breadcrumb
 - Meta
 - Jump to top
+- Summary
 - Footer
 - Subfooter
 - CSS-Classes to add margin at top or bottom
@@ -488,7 +489,41 @@ body.video cite { color: #fff; }
   background: $grey-2;
 }
 
+/* Summary
+------------------------------------------------------------------- */
+.tldr-wrapper {
+  background: lighten($grey-1, 7%);
+  border: 0;
+  font-size: 75%;
+  margin: 0 1em 0 0;
+  padding: 1em;
 
+  .tldrarrow {
+    transform: rotate(-90deg);
+    display: inline-block;
+    transition: linear .1s;
+  }
+
+  &.open {
+    .tldrarrow {
+      transform: none;
+      transition: linear .1s;
+    }
+  }
+
+  .blocktitle {
+    display: block;
+    cursor: pointer;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  ol {
+    display: none;
+  }
+}
 
 /* Footer
 ------------------------------------------------------------------- */

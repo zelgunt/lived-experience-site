@@ -265,6 +265,20 @@ The above embeds this (resize the width of your viewport to see that it's fluid 
 
 {% vimeo 47494666 "Decolonization Means Prison Abolition" %}
 
+### Summary
+{:data-summary="This is an example of a manually generated summary for this section."}
+
+Summaries are automatically generated for pages with 3 or more headlines in the article context[^summary-headlines]. Summary text is pulled from the paragraphs immediately following each headline.
+
+To manually define summary text, add a `data-summary` to the headline using Kramdown syntax:
+
+    ### This is the headline
+    {:data-summary="And this is a summary of the section."}
+
+
+
+[^summary-headlines]: This can be adjusted in `assets/js/main.js` in the `tldr` call, 'minimumHeadlines' property.
+
 ### Post terminator
 
 To include a terminator at the end of the last paragraph, use `...end of post.{% raw %}{% eof %}{% endraw %}`. If you don't leave a space between the last character and the tag, it will ensure that the last word breaks to a new line and doesn't leave the terminator hanging. This is recommended.{% eof %}

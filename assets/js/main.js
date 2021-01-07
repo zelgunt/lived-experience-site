@@ -46,5 +46,22 @@
 
 	  $("#vi" + vimeoID).replaceWith(videoFrame);
 	});
+
+	$('#main article').tldr({
+	      headerTag: 'h4 class=blocktitle', // the tag for the header above the list
+	      headerTitle: '<span class="tldrarrow">&#9660;</span> Summary',
+	      dataAttribute: 'summary',
+	      collapsed: false, // if true, summaries collapse and expand on headline clicks
+	      insertAfterLead: false, // insert the output before the first headline instead of at the top
+	      grafsInSummary: 1, // number of paragraphs to summarize, 0 for unlimited
+	      sentencesPerGraf: 0, // sentences per graf in summary, 0 for unlimited
+	      maxSummaryLength: 300, // maximum characters in summary, 0 for unlimited
+	      minimumHeadlines: 3 // minimum number of headlines in text required to execute
+	    });
+
+	$('.tldr-wrapper h4').click(function() {
+	  $(this).parent('.tldr-wrapper').toggleClass('open');
+	  $(this).next('ul,ol').slideToggle(200);
+	});
 })(jQuery);
 
