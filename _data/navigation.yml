@@ -20,8 +20,8 @@
   url: "/about/methodology/"
   side: left
 
-- title: Blog
-  url: "/blog/"
+- title: News
+  url: "/news/"
   side: left
 
 - title: "Search"
