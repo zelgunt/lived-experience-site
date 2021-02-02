@@ -11,7 +11,6 @@ header:
 <ul id="author-list">
 {% for author_hash in site.data.authors %}
 {% assign author = author_hash[1] %}
-{% if author.siterole == 'Contributor' %}
 <li>
     <a href="/contributors/{{ author.slug }}">
         <div class="author" role="contentinfo">
@@ -30,7 +29,6 @@ header:
         <span class="author-role">{{ author.siterole }}</span>
     </a>
 </li>
-{% endif %}
 {% endfor %}
 </ul>
     
