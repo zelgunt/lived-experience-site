@@ -3,75 +3,26 @@
   side: left
 
 - title: Participate
-  url: ""
   side: left
   dropdown:
   - title: "Discovering Your Power"
-    url: ""
+    url: "/about/dyp/"
   - title: "Interviews"
-    url: ""
-  - title: "System Facilitation"
-
-- title: Download
-  url: ""
-  side: left
-  dropdown:
-  - title: "Discovering Your Power Forms"
-    url: ""
-  - title: "Interview Forms"
-    url: ""
-  - title: "System Facilitation Forms"
-    url: ""
+    url: "/about/interviews/"
+  - title: "System facilitation"
+    url: "/about/facilitation/"
 
 - title: Meet the Team
-  url: ""
+  url: "/contributors/"
   side: left
-  dropdown:
-  - title: "Andrew Aleman"
-    url: "/contributors/andrew-aleman"
-  - title: "Racquel Henderson"
-    url: "/contributors/racquel-henderson"
-  - title: "Keith Miller"
-    url: "/contributors/keith-miller"  
-  - title: "Dominique Morgan"
-    url: "/contributors/dominique-morgan"
-  - title: "Jeff Severns Guntzel"
-    url: "/contributors/jeff-severns-guntzel"
-  - title: "Doualy Xaykaothao"
-    url: "/contributors/doualy-xaykaothao"  
 
 - title: How We Work
-  url: "/blog/"
+  url: "/about/methodology/"
   side: left
-  dropdown:
-  - title: "Facilitation Approach"
-    url: ""
-  - title: "Interview Methodology"
-    url: ""
-  - title: "Investigative Research"
-    url: ""
-  - title: Sharing Out
-    url: ""
 
 - title: Blog
   url: "/blog/"
   side: left
-  dropdown:
-  - title: "Blog Archive"
-    url: "/blog/archive/"
-  - title: "Topics"
-    url: "/topic/"
-
-# - title: "Downloads"
-#  url: "/resources/"
-#  side: left
-#  dropdown:
-#  - title: "Illustrated Consent"
-#    url: "/resources/consent/"
-#  - title: '"I" statements'
-#    url: "/resources/i-statements/"
-#  - title: "Discovering Your Power Resources"
-#    url: "/resources/consent/"
 
 - title: "Search"
   url: "/search/"
