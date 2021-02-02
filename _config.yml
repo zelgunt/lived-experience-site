@@ -3,9 +3,9 @@
 title: Lived Experience Project
 email: your-email@example.com
 description: >-
-  The Lived Experience Project is an Omaha-based 
-  juvenile justice research and facilitation project 
-  that centers the experiences of system impacted youth 
+  The Lived Experience Project is an Omaha-based
+  juvenile justice research and facilitation project
+  that centers the experiences of system impacted youth
   and their families.
 credits:
 author: jeff
@@ -28,8 +28,8 @@ tag_page_dir: topic
 tag_permalink_style: pretty
 tag_title_prefix: "Posts Tagged &ldquo;"
 tag_title_suffix: "&rdquo;"
-author_dir: contributors
-author_title_prefix: "Contributor: "
+author_dir: /team
+author_title_prefix: "Team Member: "
 category_dir: "/category"
 category_title_prefix: ''
 

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Contributors
-permalink: /contributors/
+title: Team
+permalink: /team/
 breadcrumb: true
 header:
   image_fullwidth: lex-community.jpg
@@ -12,7 +12,7 @@ header:
 {% for author_hash in site.data.authors %}
 {% assign author = author_hash[1] %}
 <li>
-    <a href="/contributors/{{ author.slug }}">
+    <a href="/team/{{ author.slug }}">
         <div class="author" role="contentinfo">
             <div class="postUser">
                 <div class="postUser__portrait">
