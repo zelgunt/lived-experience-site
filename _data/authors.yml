@@ -9,7 +9,7 @@ andrew-aleman:
   slug: andrew-aleman
   # Define where the author will show up in collection pages
   # Usually Contributor
-  siterole: Contributor
+  siterole: Facilitator
   # URI, email, and Twitter can be left blank
   uri:
   email: andrew@terralunacollaborative.com
@@ -26,7 +26,7 @@ andrew-aleman:
 racquel-henderson:
   name: "Racquel Henderson"
   slug: racquel-henderson
-  siterole: Lead Interviewer
+  siterole: Interviewer
   uri:
   email: racquel@terralunacollaborative.com
   twitter:
@@ -40,7 +40,7 @@ racquel-henderson:
 keith-miller:
   name: "Keith Miller"
   slug: keith-miller
-  siterole: Contributor
+  siterole: Preject Manager
   uri:
   email: keith@terralunacollaborative.com
   twitter:
@@ -52,7 +52,7 @@ keith-miller:
 dominique-morgan:
   name: "Dominique Morgan"
   slug: dominique-morgan
-  siterole: Contributor
+  siterole: Facilitator
   uri: https://www.dominiquemorgan.com
   email: dominiqu@terralunacollaborative.com
   twitter:
@@ -64,7 +64,7 @@ dominique-morgan:
 jeff-severns-guntzel:
   name: Jeff Severns Guntzel
   slug: jeff-severns-guntzel
-  siterole: Contributor
+  siterole: Researcher
   uri:
   email: jeff@terralunacollaborative.com
   twitter: "jsguntzel"
@@ -75,7 +75,7 @@ jeff-severns-guntzel:
 doualy-xaykaothao:
   name: "Doualy Xaykaothao"
   slug: doualy-xaykaothao
-  siterole: Contributor
+  siterole: Researcher
   uri:
   email: doualy@terralunacollaborative.com
   twitter:

@@ -3,6 +3,7 @@
   side: left
 
 - title: Participate
+  url: "/participate/"
   side: left
   dropdown:
   - title: "Discovering Your Power"
