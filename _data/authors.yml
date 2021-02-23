@@ -40,7 +40,7 @@ racquel-henderson:
 keith-miller:
   name: "Keith Miller"
   slug: keith-miller
-  siterole: Preject Manager
+  siterole: Project Manager
   uri:
   email: keith@terralunacollaborative.com
   twitter:
@@ -69,15 +69,16 @@ jeff-severns-guntzel:
   email: jeff@terralunacollaborative.com
   twitter: "jsguntzel"
   summary: Jeff Severns Guntzel is lead researcher for the Lived Experience Project.
-  bio:
+  bio: |+
+      My work for the Lived Experience Project draws on two decades of investigative and storytelling work. Before coming to the project, I reported from Iraq, Palestine, and points all over the United States. My work has been published by American Public Media, New York Times, Punk Planet Magazine, Marketplace, GOOD, Utne Reader, Al Jazeera America, and others. It was as a journalist that I learned the investigative and data techniques that are the core of our project’s research work. My work draws on the methods of investigative social research, investigative journalism, and developmental evaluation. My work for the project includes acquisition and analysis of public documents and data, the construction of custom data sets and interfaces, and relationship building with individuals who are immersed in a particular system and can serve as partners in meaning-making. Additionaly, I manage a qualitative database made of the interviews Racquel Henderson and others. The purpose of the work is to illuminate systemic patterns that harm or marginalize individuals and groups. For the Lived Experience Project, this means pursuing data and relationships that help to illuminate patterns and irregularities in the juvenile justice system that are harmful to youth and families and either invisible to or ignored by the system as a whole (or its components). What becomes of all this work? We share what we've learned with people impacted by the system and with people working in the system (in formats as varied as community forums, investigative reports, and comic books), collaborating with these audiences on meaning-making and next steps.
   photo: team-jeff-severns-guntzel-sq.jpeg
 
-doualy-xaykaothao:
-  name: "Doualy Xaykaothao"
-  slug: doualy-xaykaothao
-  siterole: Researcher
-  uri:
-  email: doualy@terralunacollaborative.com
-  twitter:
-  summary: Doualy Xaykaothao is lead researcher for the Lived Experience Project.
-  photo: team-doualy-xaykaothao-sq.jpeg
+# doualy-xaykaothao:
+#  name: "Doualy Xaykaothao"
+#  slug: doualy-xaykaothao
+#  siterole: Researcher
+#  uri:
+#  email: doualy@terralunacollaborative.com
+#  twitter:
+#  summary: Doualy Xaykaothao is lead researcher for the Lived Experience Project.
+#  photo: team-doualy-xaykaothao-sq.jpeg

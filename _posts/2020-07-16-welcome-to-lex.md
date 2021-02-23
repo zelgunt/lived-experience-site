@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 title:  "Welcome to the Lived Experience Project"
-subheadline: Subhed
+subheadline: I am a subhed
 date:   2020-07-16 08:48
 meta_teaser: "Description used for meta tags. Short, no HTML."
 teaser: "Lead in text for summary pages. HTML OK."
@@ -10,7 +10,7 @@ header:
   caption: Artwork by TK
   caption_url: https://www.odera.net/
 thumbnail: lex-shadows-thumb.jpg
-categories: [Blog]
+categories: [News]
 tags: [test tag, another tag]
 author: jeff
 gallery:

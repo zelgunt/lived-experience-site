@@ -17,9 +17,9 @@
   url: "/team/"
   side: left
 
-- title: How We Work
-  url: "/about/methodology/"
-  side: left
+# - title: How We Work
+#  url: "/about/methodology/"
+#  side: left
 
 - title: News
   url: "/news/"
