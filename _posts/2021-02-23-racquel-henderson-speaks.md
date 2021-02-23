@@ -22,28 +22,6 @@ author: jeff
 
 **JSG:** What exactly is the water? What is the everything you thought you had got over?
 
-**RH:** The water was my own lived experience in the juvenile justice system. It was issues I had growing up -- with being shifted from one family member to another when my mom was sick. Not knowing my biological family. The toxic relationships. The physical, sexual, and verbal abuse. The saying yes when I wanted to say no. And the saying no and it not meaning anything. Just all those things.
-
-**JSG:** Was it the totality of what you were hearing from interviewees or was a crack when somebody talks about physical abuse, another crack when somebody talks about saying no and it not meaning anything?
-
-**RH:** It was everything. Maybe my first interview was nothing, and then the second and third there was a little crack. And then the fourth, fifth, and sixth made a whole piece of rubble come out.
-
-**JSG:** Was there a point that you remember the dam giving way comepletely? Where you knew it *all* the water was coming?
-
-**RH:** It was upon me before I realized it.
-
-**JSG:** We were just getting to know each other in those days. What clues would I have had that you were going through this?
-
-**RH:** I was just keeping it. I was just keeping it. 
-
-**JSG:** Does it still feel like you are in the water when you're doing this work?
-
-**RH:** It depends. There are times when I'm floating on the water, times when I'm sinking, times when I'm swimming. And there are times when the wall is getting put back together.
-
-**JSG:** Like the water on the other side of the dam has receded enough that you can patch up some cracks?
-
-**RH:** Yeah.
-
 **LEX Team: I'm adding the rest tomorrow morning...**
 
 {% eof %}
