@@ -5,9 +5,9 @@ permalink: /about/principles/
 header:
   image_fullwidth: lex-healing.jpg
 ---
-The Lived Experience Project's first priority is to support those directly impacted by the system. What we learn from that work is directed towards an effort to inform system stakeholders and concerned citizens about the ways young people and their families are impacted by county and state policies and practices. The principles below guide us in our design of activities and resources. They also guide our support of efforts to influence juvenile justice institutions towards centering the lived experience of current and former system-impacted youth and families. 
+The Lived Experience Project's first priority is to support those directly impacted by the system. What we learn from that work is directed towards an effort to inform system stakeholders and concerned citizens about the ways young people and their families are impacted by county and state policies and practices. The principles below guide us in our design of activities and resources. They also guide our support of efforts to influence juvenile justice institutions towards centering the lived experience of current and former system-impacted youth and families.
 
-## Foundational principles
+### Foundational principles
 
 1. We create space for **anyone who has been impact by the juvenile justice system**. These individuals are encouraged to share their stories while extending the gift of **deep listening**.
 
@@ -17,7 +17,7 @@ The Lived Experience Project's first priority is to support those directly impac
 
 4. We seek to **reduce harm and trauma** that children, youth, and families experience within the juvenile justice system and at its edges.
 
-## Research conduct principles
+### Research conduct principles
 
 1. We work to ensure all research activities contribute to the **integrity and credibility** of our data and findings.
 
