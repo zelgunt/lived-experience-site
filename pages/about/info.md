@@ -7,21 +7,21 @@ breadcrumb: true
 
 **Click a link to learn more about...**
 
-- Our scope of work /about/lex
-- Discovering Your Power sessions /about/dyp/
-- Interviews /about/interviews/
-- Project principles /about/principles/
-- How to contact us /contact/
-- Project news
+- [Our scope of work](/about/lex)
+- [Discovering Your Power](/about/dyp/) sessions 
+- [Interviews](/about/interviews/)
+- [System-Facing Facilitation](/about/facilitation/)
+- [Project principles](/about/principles/)
+- [How to contact us](/contact/)
 
 
 **Meet our team**
 
-- Andrew Aleman (Facilitator)
-- Racquel Henderson (Interviewer and Facilitator)
-- Keith Miller (Project Manager)
-- Dominique Morgan (Facilitator)
-- Jeff Severns Guntzel (Researcher)
+- [Andrew Aleman](/team/andrew-aleman/) (Facilitator)
+- [Racquel Henderson](/team/racquel-henderson/) (Interviewer and Facilitator)
+- [Keith Miller](/team/keith-miller/) (Project Manager)
+- [Dominique Morgan](/team/dominique-morgan/) (Facilitator)
+- [Jeff Severns Guntzel](/team/jeff-severns-guntzel/) (Researcher)
 
 **Find us on social media**
 

@@ -32,4 +32,4 @@ The Lived Experience project is a research collaboration between The Sherwood Fo
 - We follow up within four months
 - We can provide ongoing coaching and support
 
-If you have questions about our facilitated sessions, please contact facilitator Andrew Aleman at andrew@terralunacollaborative.com.
+If you have questions about our facilitated sessions, please contact facilitator [Andrew Aleman](mailto:andrew@terralunacollaborative.com).

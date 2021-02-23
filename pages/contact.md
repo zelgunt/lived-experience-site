@@ -2,14 +2,12 @@
 layout: page
 title: "Contact"
 meta_title: "Contact the Lived Experience Project"
-teaser: "Want to get in touch with us? Here's how."
 permalink: "/contact/"
 ---
-Not sure what we want on this page yet, you know?
 
-A list of email addresses?
+If you have questions about the Lived Experience Project, we would love to hear from you.
 
-A contact form? Wufoo?
+Please contact our Project Manager at [keith@terralunacollaborative.com](mailto:keith@terralunacollaborative.com)
 
 <ul class="no-bullet">
 {% for network_item in site.data.socialmedia %}

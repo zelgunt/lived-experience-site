@@ -12,4 +12,4 @@ We describe the process best through our illustrated assent and consent forms:
 
 Images TK
 
-To learn more about interviews, please contact Racquel Henderson at racquel@terralunacollaborative.com.
+To learn more about interviews, please contact [Racquel Henderson](mailto:racquel@terralunacollaborative.com).
