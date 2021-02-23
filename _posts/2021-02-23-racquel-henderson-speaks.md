@@ -2,6 +2,7 @@
 layout: page-fullwidth
 title:  "\"My One Precious Life\""
 subheadline: Racquel Henderson on why she does this work and what she's learned
+teaser: "This is the first post in a series introducing the project team. In this interview, Racquel Henderson talks about why she does this work and what she's learned."
 date:   2021-02-23
 header:
   image_fullwidth: lex-shadows.jpg
