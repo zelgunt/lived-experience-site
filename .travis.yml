@@ -3,9 +3,9 @@ os: linux
 dist: trusty
 rvm:
 - 2.4.1
-install: gem install jekyll -v 3.8.0 && gem install jekyll-redirect-from && gem install
-  s3_website
-script: jekyll build
+install: bundle install && gem install s3_website
+script:
+- bundle exec jekyll build
 after_success:
 - test $TRAVIS_BRANCH = "production" && s3_website push --config-dir=_config/production/
 - test $TRAVIS_BRANCH = "staging" && s3_website push --config-dir=_config/staging/
@@ -13,3 +13,5 @@ branches:
   only:
   - production
   - staging
+notifications:
+  slack: lex-ejq6598:N0ngYpAdDtLZfPqzgsA1JNLc

@@ -1,0 +1,91 @@
+---
+layout: default
+format: frontpage
+---
+<div id="header-home">
+    <div class="row">
+        <div class="small-12 columns">
+        </div><!-- /.medium-4.columns -->
+    </div><!-- /.row -->
+</div><!-- /#header-home -->
+
+
+{% comment %}
+*
+* First check, if widget is empty or not by checking if there is a title
+*
+{% endcomment %}
+<div class="row t60">
+	{% if page.widget1.image or page.widget1.video or page.widget1.title %}
+		{% include _frontpage-widget.html widget=page.widget1 %}
+	{% endif %}
+
+	{% if page.widget2.image or page.widget2.video or page.widget2.title %}
+		{% include _frontpage-widget.html widget=page.widget2 %}
+	{% endif %}
+
+	{% if page.widget3.image or page.widget3.video or page.widget3.title %}
+		{% include _frontpage-widget.html widget=page.widget3 %}
+	{% endif %}
+</div><!-- /.row -->
+
+
+
+{% comment %}
+*
+* First check, if there is a call for action-button
+*
+{% endcomment %}
+{% if page.callforaction.url contains 'http' %}
+{% assign url = '' %}
+{% else %}
+{% capture url %}{{ site.url }}{{ site.baseurl }}{% endcapture %}
+{% endif %}
+{% if page.callforaction %}
+    <div class="row t60 b60">
+        <div class="small-12 text-center columns">
+            <a class="button large radius {{ page.callforaction.style }}" href="{{ url }}{{ page.callforaction.url }}"{% if page.callforaction.url contains 'http' %} target="_blank" {% endif %}>{{ page.callforaction.text }}</a>
+        </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+{% endif %}
+
+{% unless site.posts == empty %}
+<div class="container-secondary">
+    <div class="row t30 b20 homepage">
+        <div class="medium-12 columns">
+            <h2 class="font-size-h5">{{ site.data.language.new_blog_entries }}</h2>
+        </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <div class="row">
+        <div class="medium-12 columns homepage__post-hero">
+            {% for post in site.posts limit:1 %}
+            {% if post.image.title or post.thumbnail %}
+            <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title | escape_once }}"><span class="homepage__post-hero-thumbnail" style="background-image: url('{{ site.urlimg }}{% if post.thumbnail %}{{ post.thumbnail }}{% elsif post.image.title %}{{ post.image.title }}{% endif %}');">
+            </span></a>
+            {% endif %}
+            <!-- {% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %} -->
+            <div class="homepage__post-hero-content">
+                <span class="homepage__post-hero-subhed"><time class="dt-published" datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %d, %Y"}}</time></span>
+                <h3 class="font-size-h2"><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+                <p>
+                    {% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% else post.teaser %}{{ post.teaser | strip_html | escape }}{% endif %}
+                    <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title | escape_once }}"><strong>{{ site.data.language.read_more }}</strong></a>
+                </p>
+                {% endfor %}
+            </div>
+        </div><!-- /.medium-5.columns -->
+
+
+        <div class="medium-12 columns">
+            <p><strong>{{ site.data.language.more_articles }}</strong></p>
+            {% include list-posts entries='3' offset='1' %}
+        </div><!-- /.medium-7.columns -->
+    </div><!-- /.row -->
+</div>
+{% endunless %}
+
+<div class="row">
+    {{ content }}
+</div><!-- /.row -->

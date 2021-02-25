@@ -1,0 +1,24 @@
+- # name: YouTube
+  # url: https://www.youtube.com/LivedExperience
+  # class: icon-youtube
+  # title: "The Lived Experience Project on YouTube"
+
+- name: Twitter
+  url: https://twitter.com/xxxxxxx
+  class: icon-twitter
+  title: "The Lived Experience Project on Twitter"
+
+- name: Facebook
+  url: https://facebook.com/xxxxxxxx
+  class: icon-facebook
+  title: "The Lived Experience Project on Facebook"
+
+- name: Instagram
+  url: https://instagram.com/xxxxxxxx
+  class: icon-instagram
+  title: "The Lived Experience Project on Instagram"
+
+- # name: Soundcloud
+  # url: https://soundcloud.com/xxxxxxxx
+  # class: icon-soundcloud
+  # title: "The Lived Experience Project on Soundcloud"

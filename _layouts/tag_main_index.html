@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<div id="blog-index" class="row">
+	<div class="small-12 columns t30">
+		<h1>{{ page.title }}</h1>
+
+
+		<ul>
+			{% for tag in page.tags %}
+			<li><a href="/{{ site.tag_page_dir }}/{{ tag | slugify }}/" title="Posts tagged {{tag}}">{{tag}}</a></li>
+			{% endfor %}
+		</ul>
+	</div><!-- /.small-12.columns -->
+</div><!-- /.row -->

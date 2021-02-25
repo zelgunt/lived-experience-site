@@ -1,0 +1,19 @@
+<!-- Look the author details up from the site config. -->
+{% assign author = site.data.authors[page.author] %}
+<!-- Output author details if some exist. -->
+{% if author %}
+	<div class="header-author" role="contentinfo">
+	  <div class="postUser">
+	  	{% if author.photo %}
+	    <div class="postUser__portrait">
+	      <a href="/contributors/{{ author.slug }}">
+	        <img class="u-photo headshot" src="{{ site.url | join_path: 'images', author.photo }}" alt="Photo of {{ author.name }}" width="150" height="150">
+	  	  </a>
+	    </div>
+	    {% endif %}
+	    <div class="postUser__name">
+	    	<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="p-name"><a href="/contributors/{{ author.slug }}">{{ author.name }}</a></span></span>
+	    </div>
+	  </div>
+	</div>
+{% endif %}

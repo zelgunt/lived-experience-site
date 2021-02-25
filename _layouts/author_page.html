@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<div id="blog-index" class="row">
+	<div class="small-12 columns t30">
+		<h1>{{ page.title }}</h1>
+
+		<div class="author-page author h-card p-author" role="contentinfo">
+		  <div class="postUser">
+		  	{% if site.data.authors[page.author].photo %}
+		    <div class="postUser__portrait">
+		      <img class="u-photo headshot" src="{{ site.url | join_path: 'images', site.data.authors[page.author].photo }}" alt="Photo of {{ site.data.authors[page.author].name }}" width="300" height="300">
+		    </div>
+		    {% endif %}
+		    <div class="postUser__name">
+		    	<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="p-name">{{ site.data.authors[page.author].name }}</span></span>
+		    	<ul>
+		    		{% if site.data.authors[page.author].uri %}
+		    		<li><a href="{{ site.data.authors[page.author].uri }}">{{ site.data.authors[page.author].uri }}</a></li>
+		    		{% endif %}
+		    		{% if site.data.authors[page.author].email %}
+		    		<li>Email: <a href="mailto:{{ site.data.authors[page.author].email }}">{{ site.data.authors[page.author].email }}</a></li>
+		    		{% endif %}
+		    		{% if site.data.authors[page.author].twitter %}
+		    		<li><a href="https://twitter.com/{{ site.data.authors[page.author].twitter }}">@{{ site.data.authors[page.author].twitter }}</a></li>
+		    		{% endif %}
+		    	</ul>
+		    </div>
+		  </div>
+		</div>
+
+
+		{{ site.data.authors[page.author].bio | markdownify }}
+
+	</div>
+	<div class="large-8 columns t30">
+		<h5>Posts</h5>
+
+		<ul>
+			{% for post in site.posts %}
+			{% if post.author == page.author %}
+			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endif %}
+			{% endfor %}
+		</ul>
+	</div><!-- /.small-12.columns -->
+</div><!-- /.row -->

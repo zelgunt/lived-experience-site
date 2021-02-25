@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div>
+	<article role="article" class="post tags">
+		{% if page.title %}
+		<header>
+			<h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+		</header>
+		{% endif %}
+
+		<section class="tag_index" id="alltags">
+			<h3>All Topics</h3>
+			<ul>
+				{% for tag in page.tags %}
+				<li><a href="/{{site.tag_index_dir}}/{{tag}}/" title="Posts tagged {{tag}}">{{tag}}</a></li>
+				{% endfor %}
+			</ul>
+		</section>
+
+	</article>
+</div>
