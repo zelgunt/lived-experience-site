@@ -54,6 +54,13 @@ The info in the footer:
 
 A sidebar can be enabled with `sidebar: right` or `sidebar: left`
 
+If using a sidebar, the layout needs to be "page", as "page-fullwidth" will override the sidebar layout.
+
+    ---
+    layout: page
+    sidebar: left
+    ---
+
 Content of the sidebar is edited in `_includes/sidebar.html`. It's static using HTML (not Markdown). I don't know how useful this will be.
 
 
@@ -101,6 +108,14 @@ Add tags at your pleasure using the frontmatter for the post. Tags should be spe
     - other tag
 
 Tag indexes are automatically at `/topic/tag-name` and an index of all active tags is at `/topic/`. Clicking on a tag in the post metadata will show all other posts with that tag in reverse chronological order.
+
+### Pull quotes
+
+You can define a pullquote using the `{% pullquote %}` block tag. This tag has a beginning and end tag, and can be set to `left`, `right`, or `center` (defaults to center).
+
+{% raw %}
+    {% pullquote left %}Pull quote text goes here{% endpullquote %}
+{% endraw %}
 
 ### Table of contents
 
