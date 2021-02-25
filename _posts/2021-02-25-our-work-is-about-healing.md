@@ -19,7 +19,7 @@ Before my first interview in 2018, I was thinking to myself: It's just asking qu
 
 You know what? Turns out *knowing* meant it would never be a matter of "just asking questions." From that first interview to my most recent three years later, I've witnessed people young and old answering questions about their lives, their hurt, and their joy. Often these are questions nobody has ever asked them and their answers include things they have never shared---I hear that all the time "I never told that to anybody before!".
 
-{% pullquote center %}I know from my own life what happens when you don't unpack the stuff and process it. When you don't have an outlet or a support system or someone to say, "I understand that you went through those things.{% endpullquote %}
+{% pullquote center %}Our interviews are about you discovering your power. And discovering your power is about owning your life, living in your truth, and being transparent, and about allowing all of that to lead you to your purpose.{% endpullquote %}
 
 Our interviews are about healing. And if the people we are interviewing don't get something out of it--some self-revelation, some anything--then we're putting people through reliving their trauma for *nothing*. In a life of people failing to keep them safe, harming them, we become another perpetrator.
 
