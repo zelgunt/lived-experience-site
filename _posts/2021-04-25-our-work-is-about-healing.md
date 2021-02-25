@@ -15,8 +15,6 @@ tags: [Interviews, Healing]
 author: racquel-henderson
 ---
 
-![](/images/team-racquel-henderson-smallsq.png)
-
 Before my first interview in 2018, I was thinking to myself: It's just asking questions. I mentor people with lived experience in the system, I've been in community with system-impacted my whole life, and I have *my own* lived experiences of the system. This isn't some other world to me, this is a world I *know*.
 
 You know what? Turns out *knowing* meant it would never be a matter of "just asking questions." From that first interview to my most recent three years later, I've witnessed people young and old answering questions about their lives, their hurt, and their joy. Often these are questions nobody has ever asked them and their answers include things they have never shared---I hear that all the time "I never told that to anybody before!".
