@@ -332,6 +332,10 @@ body.video cite { color: #fff; }
 .postUser {
  flex:0 1 auto;
  padding-bottom:10px;
+
+ a, a:hover, a:focus, a:visited {
+  border-bottom: 0!important;
+ }
 }
 
 .postUser__portrait {
