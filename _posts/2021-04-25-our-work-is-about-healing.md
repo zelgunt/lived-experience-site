@@ -2,7 +2,7 @@
 layout: page
 title:  Our Work is About Healing
 subheadline: Lead interviewer Racquel Henderson describes the work
-date:   2020-07-16 08:48
+date:   2021-02-25 08:48
 meta_teaser: "Our interviews are about you discovering your power. And discovering your power is about owning your life, living in your truth, and being transparent, and about allowing all of that to lead you to your purpose."
 teaser: 
 header:
