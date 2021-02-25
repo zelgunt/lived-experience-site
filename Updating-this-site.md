@@ -111,7 +111,7 @@ Tag indexes are automatically at `/topic/tag-name` and an index of all active ta
 
 ### Pull quotes
 
-You can define a pullquote using the `{% pullquote %}` block tag. This tag has a beginning and end tag, and can be set to `left`, `right`, or `center` (defaults to center).
+You can define a pullquote using the `pullquote` block tag. This tag has a beginning and end tag, and can be set to `left`, `right`, or `center` (defaults to center).
 
 {% raw %}
     {% pullquote left %}Pull quote text goes here{% endpullquote %}
