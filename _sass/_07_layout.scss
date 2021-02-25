@@ -318,11 +318,17 @@ body.video cite { color: #fff; }
   }
 }
 
+.header-author {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
 .author {
  clear:both;
  display:flex;
  margin-top:1em;
 }
+
 .postUser {
  flex:0 1 auto;
  padding-bottom:10px;

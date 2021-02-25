@@ -22,11 +22,12 @@ format: page
 			</header>
 
 
-			{% if page.teaser %}
+			<!-- {% if page.teaser %}
 			<p class="teaser" itemprop="description">
 				{{ page.teaser }}
 			</p>
-			{% endif %}
+			{% endif %} -->
+			{% include _post_author.html %}
 
 			<div itemprop="articleSection" class="content">
 			{{ content }}

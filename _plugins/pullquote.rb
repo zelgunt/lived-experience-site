@@ -28,7 +28,7 @@ module Jekyll
 
     def render(context)
       output = super
-      @quote = output
+      @quote = Kramdown::Document.new(output).to_html
       %Q(<blockquote class="pullquote #{@align}">#{@quote}</blockquote>)
     end
 
