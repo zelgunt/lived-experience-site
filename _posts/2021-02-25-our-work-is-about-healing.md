@@ -3,8 +3,8 @@ layout: page
 title:  Our Work is About Healing
 subheadline: Lead interviewer Racquel Henderson describes the work
 date:   2021-02-25 08:48
-meta_teaser: "Our interviews are about you discovering your power. And discovering your power is about owning your life, living in your truth, and being transparent, and about allowing all of that to lead you to your purpose."
-teaser: 
+meta_teaser: 
+teaser: "Our interviews are about you discovering your power. And discovering your power is about owning your life, living in your truth, and being transparent, and about allowing all of that to lead you to your purpose."
 header:
   image_fullwidth: lex-shadows.jpg
   caption: Artwork by Odera Igbokwe
@@ -18,6 +18,8 @@ author: racquel-henderson
 Before my first interview in 2018, I was thinking to myself: It's just asking questions. I mentor people with lived experience in the system, I've been in community with system-impacted my whole life, and I have *my own* lived experiences of the system. This isn't some other world to me, this is a world I *know*.
 
 You know what? Turns out *knowing* meant it would never be a matter of "just asking questions." From that first interview to my most recent three years later, I've witnessed people young and old answering questions about their lives, their hurt, and their joy. Often these are questions nobody has ever asked them and their answers include things they have never shared---I hear that all the time "I never told that to anybody before!".
+
+{% pullquote center %}Our interviews are about you discovering your power. And discovering your power is about owning your life, living in your truth, and being transparent, and about allowing all of that to lead you to your purpose.{% endpullquote %}
 
 Our interviews are about healing. And if the people we are interviewing don't get something out of it--some self-revelation, some anything--then we're putting people through reliving their trauma for *nothing*. In a life of people failing to keep them safe, harming them, we become another perpetrator.
 
