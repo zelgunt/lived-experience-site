@@ -3,15 +3,15 @@ layout: page
 title:  Our Work is About Healing
 subheadline: Lead interviewer Racquel Henderson describes the work
 date:   2020-07-16 08:48
-meta_teaser: "Description used for meta tags. Short, no HTML."
-teaser: How many people sit down in an interview, give some part of their story, and they're not getting anything out of it? Our work is about healing. Lead interviewer Racquel Henderson describes her approach to interviewing.
+meta_teaser: "Our interviews are about you discovering your power. And discovering your power is about owning your life, living in your truth, and being transparent, and about allowing all of that to lead you to your purpose."
+teaser: 
 header:
   image_fullwidth: lex-shadows.jpg
   caption: Artwork by Odera Igbokwe
   caption_url: https://www.odera.net/
 thumbnail: lex-shadows-thumb.jpg
-categories: [Interviews]
-tags: [test tag, another tag]
+categories: [How we work]
+tags: [Interviews, Healing]
 author: racquel-henderson
 ---
 
@@ -25,12 +25,10 @@ Our interviews are about healing. And if the people we are interviewing don't ge
 
 I know from my own life what happens when you don't unpack the stuff and process it. When you don't have an outlet or a support system or someone to say, "I understand that you went through those things. How has it affected you?" When you don't have that, everything gets stuck behind the dam and you can't get to thriving.
 
-Sharing your story with somebody who wants to hear it--*all of it*--is so important. When we are interviewing, we're not just collecting stories. How many people sit down in an interview, give some part of their story, and they're not getting anything out of it? Our work is about healing.
+Sharing your story with somebody who wants to hear *all* of it is so important. When we interview, we're not just collecting stories. How many people sit down in an interview, give some part of their story, and they're not getting anything out of it? Our work is about healing.
 
-Our interviews are about you discovering your power. And discovering your power is about owning your life, living in your truth, and being transparent, and about allowing all of *that* to lead you to your purpose.
+Our interviews are about you discovering your power. And discovering your power is about owning your life, living in your truth, and being transparent, and about allowing all of that to lead you to your purpose.
 
 I mentioned interviewing people young and old. There's a reason we don't *only* focus on young people. I don't think that I discovered *my* power until I was 30. I still had a blockage. I still wasn't thriving or growing. I wasn't where I wanted to be in my life. I don't think you can put an age limit on that process.
 
-It's great to be able to reach young people, it's crucial in that stage in life that we address and prevent stuckness. But what if some of these life things are still happening for somebody at 25, at 40? Are their stories not important anymore? Of course they are. Those stories provide information that *we can use to reach the younger ones* so they don't stay stuck--we don't want them to be 25 and 40 and still have not discovered the power they have inside them.
-
-{% eof %}
+It's great to be able to reach young people, it's crucial in that stage in life that we address and prevent stuckness. But what if some of these life things are still happening for somebody at 25, at 40? Are their stories not important anymore? Of course they are. Those stories provide information that *we can use to reach the younger ones* so they don't stay stuck--we don't want them to be 25 and 40 and still have not discovered the power they have inside them.{% eof %}
