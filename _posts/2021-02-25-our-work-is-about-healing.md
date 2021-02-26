@@ -1,15 +1,15 @@
 ---
 layout: page
 title:  Our work is about healing
-subheadline: Lead interviewer Racquel Henderson describes the work
+subheadline: Lead interviewer Racquel Henderson describes her work
 date:   2021-02-25 08:48
-meta_teaser: 
+meta_teaser: Interviewing young people and adults
 teaser: "Our interviews are about you discovering your power, which is about owning your life, living in your truth, and being transparent. And it is ultimately about allowing all of that to lead you to your purpose."
 header:
   image_fullwidth: lex-shadows.jpg
   caption: Artwork by Odera Igbokwe
   caption_url: https://www.odera.net/
-thumbnail: lex-shadows-thumb.jpg
+thumbnail: team-racquel-henderson-sq.png
 categories: [How we work]
 tags: [Interviews, Healing]
 author: racquel-henderson
