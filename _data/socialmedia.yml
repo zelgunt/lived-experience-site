@@ -4,21 +4,21 @@
   # title: "The Lived Experience Project on YouTube"
 
 - name: Twitter
-  url: https://twitter.com/xxxxxxx
+  url: https://twitter.com/lexnebraska
   class: icon-twitter
   title: "The Lived Experience Project on Twitter"
 
 - name: Facebook
-  url: https://facebook.com/xxxxxxxx
+  url: https://facebook.com/lexnebraska
   class: icon-facebook
   title: "The Lived Experience Project on Facebook"
 
 - name: Instagram
-  url: https://instagram.com/xxxxxxxx
+  url: https://instagram.com/lexnebraska
   class: icon-instagram
   title: "The Lived Experience Project on Instagram"
 
-- # name: Soundcloud
-  # url: https://soundcloud.com/xxxxxxxx
-  # class: icon-soundcloud
-  # title: "The Lived Experience Project on Soundcloud"
+# - name: Soundcloud
+#  url: https://soundcloud.com/lexnebraska
+#  class: icon-soundcloud
+#  title: "The Lived Experience Project on Soundcloud"
