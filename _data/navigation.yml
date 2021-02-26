@@ -7,11 +7,11 @@
   side: left
   dropdown:
   - title: "Discovering Your Power"
-    url: "/about/dyp/"
+    url: "/discovering-your-power/"
   - title: "Interviews"
-    url: "/about/interviews/"
+    url: "/interviews/"
   - title: "System facilitation"
-    url: "/about/facilitation/"
+    url: "/system-facilitation/"
 
 - title: Meet the Team
   url: "/team/"

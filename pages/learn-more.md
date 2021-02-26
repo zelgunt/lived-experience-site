@@ -1,17 +1,17 @@
 ---
 layout: page
-title: What is the Lived Experience Project?
-permalink: /info/
+title: Learn More
+permalink: /learn-more/
 breadcrumb: true
 ---
 
 **Click a link to learn more about...**
 
-- [Our scope of work](/about/lex)
-- [Discovering Your Power](/about/dyp/) sessions 
-- [Interviews](/about/interviews/)
-- [System-Facing Facilitation](/about/facilitation/)
-- [Project principles](/about/principles/)
+- [Our scope of work](/about-lex-project)
+- [Discovering Your Power](/discovering-your-power/) sessions 
+- [Interviews](/interviews/)
+- [System-Facing Facilitation](/system-facilitation/)
+- [Project principles](/guiding-principles/)
 - [How to contact us](/contact/)
 
 
