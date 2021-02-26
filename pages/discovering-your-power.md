@@ -21,3 +21,16 @@ In Discovering Your Power sessions, **you are the only true expert on your life*
 We have conducted dozens of these sessions with young people who have been impacted by the system, with adults, and with adults caring for system-impacted youth.
 
 If you are interested in learning how you can participate or host a session, please contact Racquel Henderson at [Racquel Henderson](mailto:racquel@terralunacollaborative.com).
+
+Hundreds of people have participated in Discovering Yor Power sessions. Here's some of what participants have said was their biggest takeaway from the experience:
+
+    - "Knowing other people have gone through the same things as me"
+    - "I don't have to be afraid to talk to my peers/friends"
+    - "I'm going to work on not having a smart mouth"
+    - "Accepting love even when it hurts and being able to set boundaries even when it hurts"
+    - "I have a negative image of myself"
+    - "Some tools to help me work on myself"
+    - "It takes time to heal"
+    - "I ain't alone"
+    - "I have a voice - use it wisely"
+    - "This was better than a Huskies game!"
