@@ -275,6 +275,10 @@ code {
 ul, ol {
   margin-left: 20px;
   padding: 0;
+
+  ul, ol {
+    margin-top: 0;
+  }
 }
 li {
   margin-left: 0;
