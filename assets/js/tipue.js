@@ -306,7 +306,7 @@ var btsearch_stem = {"words": [
                                                        }
                                                   }).join(" ");
                                                   if (tags.length > 0) {
-                                                       out += '<span class="tags">Tags: ' + tags + '</span>';
+                                                       out += '<span class="tags">' + tags + '</span>';
                                                   }
                                              }
 
