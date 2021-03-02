@@ -1,0 +1,22 @@
+---
+layout: default
+title: "Blog Archive"
+teaser: "Posts from the Lived Experience Project."
+breadcrumb: true
+header:
+    image_fullwidth: lex-community.jpg
+    caption: Artwork by Odera Igbokwe
+    caption_url: https://www.odera.net/
+permalink: "blog/archive/"
+exclude_from_search: true
+---
+<div id="blog-index" class="row">
+	<div class="small-12 columns t30">
+		<h1>{{ page.title }}</h1>
+		{% if page.teaser %}<p class="teaser">{{ page.teaser }}</p>{% endif %}
+		<dl>
+			{% for post in site.posts limit:1000 %}<dt><time class="dt-published" datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %d, %Y"}}</time> › <a class="u-url" href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title | escape_once }}"><strong class="p-name">{{ post.title }}</strong></a></dt>
+			<dd>{% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% elsif post.teaser %}{{ post.teaser | strip_html | escape }}{% endif %} {% if post.categories %}[{{ post.categories | category_links }}]{% endif %}{% endfor %}
+		</dl>
+	</div><!-- /.small-12.columns -->
+</div><!-- /.row -->
