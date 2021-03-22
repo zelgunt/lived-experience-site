@@ -20,7 +20,7 @@ widget2:
   image: lex-healing-nav.png
   text: Our work acknowledges and seeks to reduce the harm and trauma that children, youth, and families experience within the juvenile justice system and at its edges.
 widget3:
-  title: "Learn more"
+  title: "Learn More"
   url: '/learn-more/'
   image: lex-courtroom-nav.png
   text: Meet our team and read more about our research and our facilitated sessions with youth, families, and people working every day in the juvenile justice system.
